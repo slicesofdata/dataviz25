@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gabriel I. Cook">
+
+<title>Git Branch Merging Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><strong>Home</strong></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../schedule/index.html" aria-current="page"> 
+<span class="menu-text"><strong>Schedule</strong></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules/index.html"> 
+<span class="menu-text"><strong>Modules</strong></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project/index.html"> 
+<span class="menu-text"><strong>Project</strong></span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>Slides</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="../slides/01_intro_rstudio_rmarkdown_slides.html">
+ <span class="dropdown-text">R, RStudio, &amp; R Markdown</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/02_git_slides.html">
+ <span class="dropdown-text">Git and GitHub</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/03_functions_slides.html">
+ <span class="dropdown-text">Functions, Parameters, and Arguments</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-hw" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>HW</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-hw">    
+        <li>
+    <a class="dropdown-item" href="../homework/hw01.Rmd">
+ <span class="dropdown-text">HW 01</span></a>
+  </li>  
+        <li class="dropdown-header">HW 02</li>
+        <li class="dropdown-header">HW 03</li>
+        <li class="dropdown-header">HW 04</li>
+        <li class="dropdown-header">HW 05</li>
+        <li class="dropdown-header">HW 06</li>
+        <li class="dropdown-header">HW 07</li>
+        <li class="dropdown-header">HW 08</li>
+        <li class="dropdown-header">HW 09</li>
+        <li class="dropdown-header">HW 10</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>Exercises</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
+        <li>
+    <a class="dropdown-item" href="../exercises/example-project-management-and-git.pdf">
+ <span class="dropdown-text">project-management-and-git.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/grouping_and_summarizing_exercise.pdf">
+ <span class="dropdown-text">grouping_and_summarizing_exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/grouping-summarizing-and-plotting-exercise.pdf">
+ <span class="dropdown-text">grouping-summarizing-and-plotting-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/visualizing-associations-exercise.pdf">
+ <span class="dropdown-text">visualizing-associations-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/spatial-position-exercise.pdf">
+ <span class="dropdown-text">spatial-position-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/visualizing-amounts-exercise.pdf">
+ <span class="dropdown-text">visualizing-amounts-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/color-scales-exercise.pdf">
+ <span class="dropdown-text">color-scales-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/coordinates-axes-and-scales-exercise.pdf">
+ <span class="dropdown-text">coordinates-axes-and-scales-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/more-distributions-exercise.pdf">
+ <span class="dropdown-text">more-distributions-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/uncertainty-and-variability-exercise.pdf">
+ <span class="dropdown-text">uncertainty-and-variability-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/small-multiples-exercise.pdf">
+ <span class="dropdown-text">small-multiples-exercise.pdf</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>Data</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
+        <li>
+    <a class="dropdown-item" href="../data/baby-names-2008.csv">
+ <span class="dropdown-text">baby-names-2008.csv</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.xlsx">
+ <span class="dropdown-text">cms-top-all-time-2023-swim.xlsx (/data/raw)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.csv">
+ <span class="dropdown-text">cms-top-all-time-2023-swim.csv (/data/raw)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../data/processed/cleaned-cms-top-all-time-2023-swim.csv">
+ <span class="dropdown-text">cleaned-cms-top-all-time-2023-swim.csv (/data/processed)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../data/processed/cleaned-2023-cms-invite.csv">
+ <span class="dropdown-text">cleaned-2023-cms-invite.csv (/data/processed)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/rfordatascience/tidytuesday">
+ <span class="dropdown-text">Fun Tidy Tuesday Data Sets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://dcas.dmdc.osd.mil/dcas/app/home">
+ <span class="dropdown-text">Defense Casualty Analysis System (DCAS)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-example-files--other" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>Example Files &amp; Other</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-example-files--other">    
+        <li>
+    <a class="dropdown-item" href="../resources/tools.html">
+ <span class="dropdown-text"><strong>Other Tools/Resources</strong></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../examples/example-figure-script.R">
+ <span class="dropdown-text">example-figure-script.R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../examples/example-rmarkdown-file-with-fig-script.Rmd">
+ <span class="dropdown-text">example-rmarkdown-file-with-fig-script.Rmd</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><strong>Cheatsheets</strong></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../cheatsheets_and_tips/symbols.html">
+ <span class="dropdown-text">Symbols</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cheatsheets/rmarkdown-2.0.pdf">
+ <span class="dropdown-text">RMarkdown</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">
+ <span class="dropdown-text">Data Wrangling with {dplyr} and {tidyr}</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://rstudio.github.io/cheatsheets/html/quarto.html">
+ <span class="dropdown-text">Quarto (Publish and Share)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://rstudio.github.io/cheatsheets/html/strings.html">
+ <span class="dropdown-text">String Manipulation with {stringr}</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://rstudio.github.io/cheatsheets/html/data-import.html">
+ <span class="dropdown-text">Reading and Writing Data with {readr}</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cheatsheets/Data_Science_With_R_Workflow.pdf">
+ <span class="dropdown-text">Data Science with RWorkflow</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://rstudio.github.io/cheatsheets/">
+ <span class="dropdown-text">More Cheatsheets From RStudio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://images.datacamp.com/image/upload/v1676540721/Marketing/Blog/Quarto_Cheat_Sheet.pdf">
+ <span class="dropdown-text">Quarto Cheat Sheet (what Quarto Files Look Like)</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/slicesofdata"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://gabrielcook.xyz"> 
+<span class="menu-text">Me</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/06_using_git_with_branches.html"><strong>Git Branch Merging Tutorial</strong></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Syllabus</strong></span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Schedule</strong></span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../modules_setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installation, Setup, &amp; R Basics</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../modules_setup/Installation &amp; Setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installation &amp; Setup</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/Installation &amp; Setup/installing_r_and_rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installing R &amp; RStudio</b></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/Installation &amp; Setup/installing_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Installing Git</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../modules_setup/R Basics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>R Basics and Refreshers</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/R Basics/introduction_to_r_rstudio_and_rmarkdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to RStudio, R Markdown, &amp; Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/R Basics/functions_and_scripts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions, Arguments, and R scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/R Basics/vectors_and_data_frame_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors and data frame basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules_setup/R Basics/reading_data_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading data files</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../modules/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Modules</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../modules/project_management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Project Management</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/project_management/setting_up_git_and_github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Management 01</strong>: Setting Up Git and GitHub for R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/project_management/using_git_and_github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Management 02</strong>: R Projects, Git, and GitHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/graphical_perception.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Graphical perception</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/data_frame_manipulation_and_wrangling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Data frame manipulation and wrangling</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/data_subsets_and_summaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Data subsets and summaries</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/considerations_in_data_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Considerations in data visualization</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/designing_perceptually_efficient_visualizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Designing perceptually-efficient visualizations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/ggplot_and_the_grammar_of_graphics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong><code>{ggplot2}</code>: The Grammar of Graphics</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/visualizing_associations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing associations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/spatial_position_and_adjustment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Spatial position and adjustment</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/visualizing_amounts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing amounts</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/color_scales_and_palettes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Color scales and palettes</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/histograms_and_density_plots.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Histograms and density plots</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/coordinates_axes_and_position_scales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Coordinates, axes, and position scales</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/statistical_transformations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Statistical transformations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/visualizing_more_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing more distributions</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/visualizing_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing uncertainty</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/legends_and_arrangement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Legends and arrangement</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/visualizing_trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing trends</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/multi_panel_plots_faceting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Multi-panel plots: Faceting</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/annotation_and_text.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Annotation and text</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/attentional_control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Attentional control</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/themes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Bonus: Theme and figure design</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules/titles_captions_and_tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Title, Captions, and Tables</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../project/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Project</b></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/01_project_team_roles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Team membership and roles</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/02_project_midterm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Midterm presentation</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/03_project_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Final Presentation</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/04_project_report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Final Report</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/05_project_tasks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/06_using_git_with_branches.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><strong>Git Branch Merging Tutorial</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="incremental">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><strong>Overview</strong></a></li>
+  <li><a href="#feature-branches" id="toc-feature-branches" class="nav-link" data-scroll-target="#feature-branches"><strong>Feature Branches</strong></a>
+  <ul class="incremental collapse">
+  <li><a href="#creating-and-checking-out-a-feature-branch" id="toc-creating-and-checking-out-a-feature-branch" class="nav-link" data-scroll-target="#creating-and-checking-out-a-feature-branch"><strong>Creating and Checking Out a Feature Branch</strong></a></li>
+  <li><a href="#setting-the-upstream-for-pushing-local-files-to-the-remote-repository" id="toc-setting-the-upstream-for-pushing-local-files-to-the-remote-repository" class="nav-link" data-scroll-target="#setting-the-upstream-for-pushing-local-files-to-the-remote-repository"><strong>Setting the Upstream for Pushing Local Files to the Remote Repository</strong></a></li>
+  </ul></li>
+  <li><a href="#the-git-command-process" id="toc-the-git-command-process" class="nav-link" data-scroll-target="#the-git-command-process"><strong>The Git Command Process</strong></a>
+  <ul class="incremental collapse">
+  <li><a href="#staging-files" id="toc-staging-files" class="nav-link" data-scroll-target="#staging-files"><strong>Staging Files</strong></a></li>
+  <li><a href="#committing-files-with-messages-for-you-and-others" id="toc-committing-files-with-messages-for-you-and-others" class="nav-link" data-scroll-target="#committing-files-with-messages-for-you-and-others"><strong>Committing Files with Messages (for you and others)</strong></a></li>
+  <li><a href="#pushing-changes-from-your-local-branch-to-your-remote-branch-on-github" id="toc-pushing-changes-from-your-local-branch-to-your-remote-branch-on-github" class="nav-link" data-scroll-target="#pushing-changes-from-your-local-branch-to-your-remote-branch-on-github"><strong>Pushing Changes from your Local Branch to your Remote Branch on GitHub</strong></a></li>
+  </ul></li>
+  <li><a href="#a-collaboration-example" id="toc-a-collaboration-example" class="nav-link" data-scroll-target="#a-collaboration-example"><strong>A collaboration Example</strong></a></li>
+  <li><a href="#scenario-overview" id="toc-scenario-overview" class="nav-link" data-scroll-target="#scenario-overview"><strong>Scenario Overview</strong></a></li>
+  <li><a href="#verify-remote-repository" id="toc-verify-remote-repository" class="nav-link" data-scroll-target="#verify-remote-repository"><strong>Verify Remote Repository</strong></a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><strong>Solution</strong></a>
+  <ul class="incremental collapse">
+  <li><a href="#steps-for-merging-a-remote-branch-into-a-local-branch" id="toc-steps-for-merging-a-remote-branch-into-a-local-branch" class="nav-link" data-scroll-target="#steps-for-merging-a-remote-branch-into-a-local-branch"><strong>Steps for Merging a Remote Branch into a Local Branch</strong></a></li>
+  </ul></li>
+  <li><a href="#fetching-updates-to-main-branch" id="toc-fetching-updates-to-main-branch" class="nav-link" data-scroll-target="#fetching-updates-to-main-branch"><strong>Fetching Updates to Main Branch</strong></a></li>
+  <li><a href="#fetching-updates-made-to-all-branches" id="toc-fetching-updates-made-to-all-branches" class="nav-link" data-scroll-target="#fetching-updates-made-to-all-branches"><strong>Fetching Updates Made to All Branches</strong></a></li>
+  <li><a href="#deciding-when-to-use-each-approach" id="toc-deciding-when-to-use-each-approach" class="nav-link" data-scroll-target="#deciding-when-to-use-each-approach"><strong>Deciding When to Use Each Approach</strong></a></li>
+  <li><a href="#more-than-2-collaborators-more-than-2-branches" id="toc-more-than-2-collaborators-more-than-2-branches" class="nav-link" data-scroll-target="#more-than-2-collaborators-more-than-2-branches"><strong>More than 2 Collaborators, More than 2 Branches</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/06_using_git_with_branches.html"><strong>Git Branch Merging Tutorial</strong></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><strong>Git Branch Merging Tutorial</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gabriel I. Cook </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview"><strong>Overview</strong></h2>
+<p>This tutorial covers how to merge a remote Git branch (one on the remote repository at GitHub.com) into a local branch (one on your local computer) without creating a local copy of that remote branch. This approach is especially useful when collaborating on a project where each team member is working on separate branches. Moreover, this approach limits temptation of working on the main branch and/or forgetting to switch off that main branch.</p>
+<p>For this reference guide, you will work only on your personal feature branch. This of course, involves creating your branch locally on your computer inside your RStudio project for your team’s project.</p>
+<p>Your team’s final R Markdown report file (<code>.Rmd</code>) will be lightweight and not visually bulky. You and your team members will write text mostly in that file and use relevant inline commands when necessary but primarily add few lines of code that will call <code>.R</code> script files (think <code>starter_script.R</code>) to perform the heavy lifting of the project report. By doing so, your report will be reproducible from beginning to end especially if you write your code flexibly to handle any new <code>NA</code>s in vectors that do not currently exist in the data set. In order to achieve this goal, you will need a lean <code>.Rmd</code> report file that leverages more complicated code manipulation. This approach will also force you to think intentionally about the goad of each script your write and in the end you will have clean, readable code files that are clear to others about their specific goals.</p>
+<p>For example, your team will <code>source()</code> many script files and embed your desired data visualizations into the report using <code>knitr::include_graphics()</code>. When you wish not to include something, you can comment out those lines easily.</p>
+<p>In order for you to utilize the script files, data files, and other files created by your team members, you will manage them using Git. Your commit history and files created by you will become part of the repository record and will be used to evaluate your contributions to the overall project. To achieve this, you will <strong>work on your own branch</strong> and integrate/merge other team member’s branch history into your own branch. The final step is to merge the branches (or more easily, the <strong>Code Lead’s branch</strong>) into the main branch for the final product deliverable package.</p>
+</section>
+<section id="feature-branches" class="level2">
+<h2 class="anchored" data-anchor-id="feature-branches"><strong>Feature Branches</strong></h2>
+<p>Feature branches are used to manage and create separate elements of development projects. Typically, separate branches are created for <em>each specific feature</em> or task a specific developer is coding. Using individual branches allows developers to work independently on new <em>features</em> without affecting the main codebase until the feature is complete and ready to be integrated. Once the feature in created, a new branch would be created for developing a new feature.</p>
+<p>For your team project, rather than create a new branch for each feature (e.g., data wrangling task, plot tasks, etc.), each team member can code all of their <em>features</em> in a single branch. If, however, you prefer to separate all tasks into branches, you may do so. For, example, create a <code>jane-data-cleaning</code> branch for cleaning data, a <code>jane-data-summary-by-year</code> branch for creating a specific data summary, and a <code>jane-bar-plot-revenue</code> branch for creating visualizations for revenue. The down side is that there will be multiple branches for you to manage. The upside is that you use branches as developers would use them.</p>
+<section id="creating-and-checking-out-a-feature-branch" class="level3">
+<h3 class="anchored" data-anchor-id="creating-and-checking-out-a-feature-branch"><strong>Creating and Checking Out a Feature Branch</strong></h3>
+<p>You can create and checkout a branch in one step.</p>
+<p><code>git checkout -b &lt;branch-name&gt;</code></p>
+</section>
+<section id="setting-the-upstream-for-pushing-local-files-to-the-remote-repository" class="level3">
+<h3 class="anchored" data-anchor-id="setting-the-upstream-for-pushing-local-files-to-the-remote-repository"><strong>Setting the Upstream for Pushing Local Files to the Remote Repository</strong></h3>
+<p><code>git push --set-upstream &lt;branch-name&gt;</code></p>
+</section>
+</section>
+<section id="the-git-command-process" class="level2">
+<h2 class="anchored" data-anchor-id="the-git-command-process"><strong>The Git Command Process</strong></h2>
+<p>Although have files created on your <em>local branch</em> (on your computer) of the repository, those files do not exist on the <em>remote branch</em> (on GitHub) until you put them there. Moreover, your team members cannot access them unless you put them on GitHub. Sorry, there is no using flash drives and emailing files. Data Science teams stage, commit, and push files, fetch and merge branches, and live happily ever after if you practice.</p>
+<section id="staging-files" class="level3">
+<h3 class="anchored" data-anchor-id="staging-files"><strong>Staging Files</strong></h3>
+<p>Stage the path to the file and file, spelled correctly.</p>
+<p><code>git add &lt;file-path-and-file-name&gt;</code></p>
+</section>
+<section id="committing-files-with-messages-for-you-and-others" class="level3">
+<h3 class="anchored" data-anchor-id="committing-files-with-messages-for-you-and-others"><strong>Committing Files with Messages (for you and others)</strong></h3>
+<p><code>git commit -m "clear message and file-name"</code></p>
+</section>
+<section id="pushing-changes-from-your-local-branch-to-your-remote-branch-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="pushing-changes-from-your-local-branch-to-your-remote-branch-on-github"><strong>Pushing Changes from your Local Branch to your Remote Branch on GitHub</strong></h3>
+<p><code>git push</code></p>
+</section>
+</section>
+<section id="a-collaboration-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-collaboration-example"><strong>A collaboration Example</strong></h2>
+<p><strong>Bill</strong> and <strong>Jane</strong> are collaborating on a project hosted on GitHub. Bill is working on a branch named <code>bill</code>, and Jane is working on a branch named <code>jane</code>. Jane has made changes to her branch and pushed them to the remote repository. Bill wants to incorporate Jane’s changes into his local <code>bill</code> branch without checking out or creating a local version of the <code>jane</code> branch.</p>
+</section>
+<section id="scenario-overview" class="level2">
+<h2 class="anchored" data-anchor-id="scenario-overview"><strong>Scenario Overview</strong></h2>
+<ul class="incremental">
+<li>The remote repository is hosted on GitHub.com.</li>
+<li>Jane is working on her local branch named <code>jane</code>.</li>
+<li>Bill is working on his local branch named <code>bill</code>.</li>
+<li>Jane pushes her changes from her local <code>jane</code> branch to the remote <code>jane</code> branch on GitHub.</li>
+<li>Bill needs Jane’s changes in order to work on his feature but Bill does not have a local branch <code>jane</code>, nor does he want to touch her branch.</li>
+<li>Bill does not touch, edit, modify, delete, or do anything with Jane’s files.</li>
+<li>Sam enters the collaboration space</li>
+</ul>
+</section>
+<section id="verify-remote-repository" class="level2">
+<h2 class="anchored" data-anchor-id="verify-remote-repository"><strong>Verify Remote Repository</strong></h2>
+<p>The only way for collaboration to work is to ensure everyone is connected properly to the remote repository. You can check the location with <code>git remote -v</code>. You will see the url for fetching and pushing.</p>
+<p><code>git remote -v</code></p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution"><strong>Solution</strong></h2>
+<p>Bill will use Git commands to <code>fetch</code> Jane’s remote branch, <code>merge</code> those changes into his local <code>bill</code> branch, and update the remote <code>bill</code> branch on GitHub. <em>Note:</em> The same solution can be applied for all branches or the main branches as described after the example steps.</p>
+<section id="steps-for-merging-a-remote-branch-into-a-local-branch" class="level3">
+<h3 class="anchored" data-anchor-id="steps-for-merging-a-remote-branch-into-a-local-branch"><strong>Steps for Merging a Remote Branch into a Local Branch</strong></h3>
+<p>These steps assume that Jane has informed Bill and other team members that she has completed her feature (e.g., <code>.R</code> script file, <code>.Rds</code> processed data file or aggregated/summarized data frame (no <code>.csv</code>’s), <code>.png</code> plot, or something else) and she has pushed them to her remote branch on GitHub.</p>
+<section id="step-1-fetch-the-remote-branch" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-fetch-the-remote-branch"><strong>Step 1: Fetch the Remote Branch</strong></h4>
+<p>The first step is for Bill to fetch Jane’s remote branch. This downloads the changes in <code>jane</code> from the remote repository to Bill’s local machine without creating a local branch for <code>jane</code>.</p>
+<p><code>git fetch origin jane</code></p>
+<p>You should see a terminal message like:</p>
+<pre><code>From https://github.com/slicesofdata/&lt;your-team-repo&gt;
+ * branch            jane      -&gt; FETCH_HEAD</code></pre>
+<p><strong>Warning:</strong> Once you <code>fetch</code> a teammate’s branch, you will see files that you have already fetched and merged and the date corresponding to the file will update accordingly. The file you see, however, will not reflect the changes. Similarly, new files that you have not fetched previously will not appear in the Files tab in RStudio. In order changes to these files, you need to perform the <code>merge</code> for the content update to take effect.</p>
+</section>
+<section id="step-2-ensure-youre-on-the-correct-local-branch" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-ensure-youre-on-the-correct-local-branch"><strong>Step 2: Ensure You’re on the Correct Local Branch</strong></h4>
+<p>Before merging any changes, Bill needs to ensure he’s on his local branch bill. He can check the current branch with:</p>
+<p><code>git branch</code></p>
+<p>This will show a list of local branches, and the current branch will be highlighted with an asterisk (*).</p>
+<p>If Bill is not on the <code>bill</code> branch, he can switch to it with:</p>
+<p><code>git checkout bill</code></p>
+</section>
+<section id="step-3-merge-the-remote-branch-into-the-local-branch" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-merge-the-remote-branch-into-the-local-branch"><strong>Step 3: Merge the Remote Branch into the Local Branch</strong></h4>
+<p>Once Bill is on his local <code>bill</code> branch, he can merge the changes from the remote <code>jane</code> branch into his local branch:</p>
+<p><code>git merge origin/jane</code></p>
+<p>This command merges the changes from <code>origin jane</code> (the remote version of Jane’s branch) into the current branch (Bill’s local <code>bill</code> branch).</p>
+<pre><code>$ git merge origin/jane
+Merge made by the 'ort' strategy.
+ src/figs/jane-revenue-by-quarter-bar-plot.R | 8 ++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 src/figs/jane-revenue-by-quarter-bar-plot.R</code></pre>
+<p>Also, as long as Bill does not create a <code>jane</code> branch locally, he will follow the same steps next time he needs to <code>fetch</code> and <code>merge</code> Jane’s pushes to the remote branch.</p>
+<p><code>git fetch origin jane</code></p>
+<p><code>git merge origin/jane</code></p>
+<p><strong>Warning:</strong> Do not create a local branch for your teammate’s branches and the above steps will remain the same.</p>
+</section>
+<section id="step-4-handle-merge-conflicts" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-handle-merge-conflicts"><strong>Step 4: Handle Merge Conflicts</strong></h4>
+<p>As mentioned previously, naming your files with intention will reduce naming files with the same name. If you have duplicate name files, you will likely have merge conflicts. You do not want to deal with these as they will cause you and I extra time and headaches.</p>
+<p><strong>Tips for inexperienced Git users to avoid merge conflicts:</strong></p>
+<ul class="incremental">
+<li>Name your files with your initials (e.g., <code>gc-revenue-by-quarter-bar-plot.R</code>), and; this will limit confusion about who created the file</li>
+<li>Do not create another team member’s branch on your local system</li>
+<li>Do not touch another team member’s files; no editing, no overwriting</li>
+<li>Read/Source files by</li>
+</ul>
+<p>If there are any merge conflicts (i.e., changes in Jane’s branch that conflict with Bill’s local changes), Git will pause the merge and prompt Bill to resolve the conflicts manually.</p>
+<!--
+To get their timestamp
+If you merge
+
+` ls -l .git/objects/path/to/conflicted/file`
+- `git checkout --theirs path/to/conflicted/file`
+
+
+-->
+<!--
+To check which files are conflicting, Bill can use:
+
+`git status`
+
+Bill can then open the conflicting files, resolve the conflicts, and stage the resolved files with:
+
+`git add <file>`
+-->
+</section>
+<section id="step-5-commit-the-merge" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-commit-the-merge"><strong>Step 5: Commit the Merge</strong></h4>
+<p>The merge using <code>git merge origin/jane</code> also automatically stages/adds the changes that occurred as part of the merge. Thus, they need to be committed.</p>
+<p>Bill can not commit the merge (assuming there are no conflicts or they have been resolved): <!-- and the changes are staged):--></p>
+<p><code>git commit -m "merged remote jane into local bill"</code></p>
+</section>
+<section id="step-6-push-the-updated-local-branch-to-the-remote-repository" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-push-the-updated-local-branch-to-the-remote-repository"><strong>Step 6: Push the Updated Local Branch to the Remote Repository</strong></h4>
+<p>Once committed, Bill needs to push his updated local <code>bill</code> branch (now with Jane’s changes) to the remote repository:</p>
+<p><code>git push origin bill</code></p>
+<p>Although <code>git push</code> would work just fine, <strong>adding <code>origin bill</code> leaves no ambiguity about the command’s behavior and ensures that the remote <code>bill</code> branch on GitHub</strong> is updated with the changes from (now) both Bill’s and Jane’s work.</p>
+<!--
+### **Routine Merging into the Main Branch**
+
+As a best practice, the **Code Lead should routinely merge feature branches** into their own branch (thus similar to the main branch) in order to ensure the all files are working correctly. Adding them to the team report `.Rmd` file will also ensure that they can be `source()`'d and the file can be produced without error.  
+
+
+Here are the steps to merge both Bill's and Jane's branches into the main branch:
+
+Switch to the main branch:
+
+`git checkout main`
+
+Pull the latest changes from the remote main branch:
+
+`git pull`
+
+Fetch Jane's changes and merge them into the main branch:
+
+bash
+Copy code
+git fetch origin jane
+git merge origin/jane
+git commit -m "Merged jane into main"
+git push
+Fetch Bill's changes and merge them into the main branch:
+
+bash
+Copy code
+git fetch origin bill
+git merge origin/bill
+git commit -m "Merged bill into main"
+git push
+
+-->
+</section>
+</section>
+</section>
+<section id="fetching-updates-to-main-branch" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-updates-to-main-branch"><strong>Fetching Updates to Main Branch</strong></h2>
+<p>If there are updates to the main branch, for example, your liaison adds new data, you can <code>fetch</code> those using the same process. You would also follow this approach if your code lead updates the main branch and you need the changes made there.</p>
+<p>For fetching the <strong>main branch only:</strong></p>
+<pre><code>git fetch origin main
+
+git merge origin/main</code></pre>
+<!-- 
+Resolve any conflicts if needed: If there are conflicts, Git will prompt you to resolve them. Edit the conflicted files as needed, then add them:
+
+git add <conflicted-file>
+git commit
+-->
+</section>
+<section id="fetching-updates-made-to-all-branches" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-updates-made-to-all-branches"><strong>Fetching Updates Made to All Branches</strong></h2>
+<p>If you make committing changes to your main branch and fetching changes from other branches a weekly process, you can instead fetch changes made on all branches. This approach may be preferred to fetching individual branches. However, if a teammate makes new changes that you need, you may need to fetch their specific branch.</p>
+<p>For fetching <strong>all branches including the main branch:</strong></p>
+<p><code>git fetch origin git merge origin/main</code></p>
+</section>
+<section id="deciding-when-to-use-each-approach" class="level2">
+<h2 class="anchored" data-anchor-id="deciding-when-to-use-each-approach"><strong>Deciding When to Use Each Approach</strong></h2>
+<p>Use <code>git fetch origin</code> (all branches) if:</p>
+<ul class="incremental">
+<li>You want to make sure all branch references are current.</li>
+<li>You are working on a project where multiple branches are frequently updated and you may need to switch between them.</li>
+<li>You are working in a team environment with several active branches and want a complete view of all recent changes.</li>
+</ul>
+<p>Use <code>git fetch origin &lt;branch-name&gt;</code> (specific branch) if:</p>
+<ul class="incremental">
+<li>You are focused on a specific branch and do not need other branches updated.</li>
+<li>The repository is large with many branches and you want a quicker fetch.</li>
+<li>You are interested only in a particular branch’s changes and want to avoid merging or managing updates from other branches.</li>
+</ul>
+</section>
+<section id="more-than-2-collaborators-more-than-2-branches" class="level2">
+<h2 class="anchored" data-anchor-id="more-than-2-collaborators-more-than-2-branches"><strong>More than 2 Collaborators, More than 2 Branches</strong></h2>
+<p>Jane is excited about the project and is making great progress. She updates a current code file, creates two more files, stages, commits, and pushes the changes to the remote repo.</p>
+<p>Sam enters the collaboration with a <code>sam</code> branch. After Jane has made these recent changes, Sam performs a <code>fetch</code> and <code>merge</code> of Jane’s branch exactly as did Bill. The difference is that Sam has a more recent version of one file and has two more files from Jane’s branch than does Bill.</p>
+<p>Sam now wants to <code>fetch</code> and <code>merge</code> Bill’s remote branch with his local branch. Although Bill has older versions of Jane’s files in his branch, Sam will retain versions of the files fetched from Jane’s remote branch. This occurs because Git uses a three-way merge algorithm for comparing the common ancestor of both branches and applies the most recent changes based on commit time stamps.</p>
+<p><strong>Warning:</strong> If you are not vigilant and you modify a teammate’s file on your branch, you may experience problems. For example, If Bill modifies code on the same lines in Jane’s file, Git will flag a merge conflict. Git will not automatically choose which version of the file to keep. You will need to do this manually.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/gabrielcook\.xyz\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
