@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.Rprofile
+
+/.quarto/
+
+
+# Ignore R history files
+.Rhistory
+.Rapp.history
