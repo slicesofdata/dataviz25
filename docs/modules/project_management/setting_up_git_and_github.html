@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel I. Cook">
-<meta name="dcterms.date" content="2025-08-06">
+<meta name="dcterms.date" content="2025-08-21">
 
 <title>Project Management 01: Setting Up Git and GitHub for R</title>
 <style>
@@ -617,38 +617,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/01_project_team_roles.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/01_project_directory_structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Directory Structure</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/02_project_team_roles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Team membership and roles</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/02_project_midterm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/03_project_midterm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Midterm presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/03_project_final.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/04_project_final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/04_project_report.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/05_project_report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Report</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/05_project_tasks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/06_project_tasks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Tasks</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/06_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Git Branch Merging Tutorial</strong></span></a>
+  <a href="../../project/06_project_tasks_client.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git Team Exercise: Safe Collaboration</span></a>
   </div>
 </li>
       </ul>
@@ -705,7 +723,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 6, 2025</p>
+      <p class="date">August 21, 2025</p>
     </div>
   </div>
   
@@ -773,7 +791,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="creating-a-repository-on-github-using-a-template"><strong>Creating a Repository on GitHub Using a Template</strong></h2>
 <p>You will need to create a personal repository for class exercises. You can create it by building the directory structure for it yourself. This, however, may lead to errors. Creating a project from a template will ensure all students have they same repository with the same directory structure.</p>
 <ol class="incremental" type="1">
-<li><p>Once logged into <strong>your</strong> GitHub account, go to this <a href="https://github.com/slicesofdata/start-project">template repository</a>.</p></li>
+<li><p>Once logged into <strong>your</strong> GitHub account, go to this <a href="https://github.com/slicesofdata/start-rstudio-projects">template repository</a>.</p></li>
 <li><p>On the top right, you will see an option to create a <strong>Use this template</strong>. Click it an select <em>“Create a new repository”</em>.</p></li>
 <li><p>Name the repository <strong>dataviz-exercises</strong> and provide a description like <em>“for data viz class exercises and homework”</em>.</p></li>
 </ol>
@@ -898,19 +916,20 @@ other attached packages:
 [13] ggplot2_3.5.2     tidyverse_2.0.0  
 
 loaded via a namespace (and not attached):
- [1] generics_0.1.4     stringi_1.8.7      hms_1.1.3          digest_0.6.37     
- [5] magrittr_2.0.3     evaluate_1.0.4     grid_4.5.1         timechange_0.3.0  
- [9] RColorBrewer_1.1-3 fastmap_1.2.0      R.oo_1.27.1        rprojroot_2.1.0   
-[13] jsonlite_2.0.0     zip_2.3.3          R.utils_2.13.0     scales_1.4.0      
-[17] cli_3.6.5          crayon_1.5.3       rlang_1.1.6        R.methodsS3_1.8.2 
-[21] bit64_4.6.0-1      withr_3.0.2        yaml_2.3.10        tools_4.5.1       
-[25] tzdb_0.5.0         pacman_0.5.1       here_1.0.1         credentials_2.0.2 
-[29] png_0.1-8          vctrs_0.6.5        R6_2.6.1           lifecycle_1.0.4   
-[33] fs_1.6.6           htmlwidgets_1.6.4  bit_4.6.0          usethis_3.1.0     
-[37] pkgconfig_2.0.3    pillar_1.11.0      gtable_0.3.6       Rcpp_1.1.0        
-[41] glue_1.8.0         gert_2.1.5         xfun_0.52          tidyselect_1.2.1  
-[45] rstudioapi_0.17.1  sys_3.4.3          knitr_1.50         farver_2.1.2      
-[49] rmarkdown_2.29     compiler_4.5.1     askpass_1.2.1      openssl_2.3.3     </code></pre>
+ [1] rappdirs_0.3.3     generics_0.1.4     stringi_1.8.7      hms_1.1.3         
+ [5] digest_0.6.37      magrittr_2.0.3     evaluate_1.0.4     grid_4.5.1        
+ [9] timechange_0.3.0   RColorBrewer_1.1-3 fastmap_1.2.0      R.oo_1.27.1       
+[13] rprojroot_2.1.0    jsonlite_2.0.0     zip_2.3.3          R.utils_2.13.0    
+[17] scales_1.4.0       httr2_1.2.1        cli_3.6.5          crayon_1.5.3      
+[21] rlang_1.1.6        R.methodsS3_1.8.2  gitcreds_0.1.2     bit64_4.6.0-1     
+[25] withr_3.0.2        yaml_2.3.10        tools_4.5.1        tzdb_0.5.0        
+[29] pacman_0.5.1       here_1.0.1         credentials_2.0.2  curl_6.4.0        
+[33] png_0.1-8          vctrs_0.6.5        R6_2.6.1           lifecycle_1.0.4   
+[37] bit_4.6.0          htmlwidgets_1.6.4  pkgconfig_2.0.3    pillar_1.11.0     
+[41] gtable_0.3.6       Rcpp_1.1.0         glue_1.8.0         gh_1.5.0          
+[45] gert_2.1.5         xfun_0.52          tidyselect_1.2.1   rstudioapi_0.17.1 
+[49] sys_3.4.3          knitr_1.50         farver_2.1.2       rmarkdown_2.29    
+[53] compiler_4.5.1     askpass_1.2.1      openssl_2.3.3     </code></pre>
 </div>
 </div>
 </div>

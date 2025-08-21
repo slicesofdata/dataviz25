@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel I. Cook">
-<meta name="dcterms.date" content="2024-10-30">
+<meta name="dcterms.date" content="2025-08-21">
 
 <title>Project Management 02: R Projects, Git, and GitHub</title>
 <style>
@@ -617,38 +617,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/01_project_team_roles.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/01_project_directory_structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Directory Structure</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/02_project_team_roles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Team membership and roles</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/02_project_midterm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/03_project_midterm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Midterm presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/03_project_final.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/04_project_final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/04_project_report.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/05_project_report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Report</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/05_project_tasks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project/06_project_tasks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Tasks</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/06_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Git Branch Merging Tutorial</strong></span></a>
+  <a href="../../project/06_project_tasks_client.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git Team Exercise: Safe Collaboration</span></a>
   </div>
 </li>
       </ul>
@@ -672,7 +690,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#creating-a-local-directory-for-class" id="toc-creating-a-local-directory-for-class" class="nav-link" data-scroll-target="#creating-a-local-directory-for-class"><strong>Creating a Local Directory for Class</strong></a></li>
   <li><a href="#connecting-the-repository-to-an-rstudio-project" id="toc-connecting-the-repository-to-an-rstudio-project" class="nav-link" data-scroll-target="#connecting-the-repository-to-an-rstudio-project"><strong>Connecting the Repository to an RStudio Project</strong></a></li>
-  <li><a href="#unzipping-the-directory-structure" id="toc-unzipping-the-directory-structure" class="nav-link" data-scroll-target="#unzipping-the-directory-structure"><strong>Unzipping the Directory Structure</strong></a></li>
   <li><a href="#understanding-the-directory-structure" id="toc-understanding-the-directory-structure" class="nav-link" data-scroll-target="#understanding-the-directory-structure"><strong>Understanding the Directory Structure</strong></a>
   <ul class="incremental collapse">
   <li><a href="#directory-and-sub-directory-purpose" id="toc-directory-and-sub-directory-purpose" class="nav-link" data-scroll-target="#directory-and-sub-directory-purpose"><strong>Directory and Sub-Directory Purpose</strong></a></li>
@@ -705,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 30, 2024</p>
+      <p class="date">August 21, 2025</p>
     </div>
   </div>
   
@@ -727,10 +744,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="libraries-used" class="level2">
 <h2 class="anchored" data-anchor-id="libraries-used"><strong>Libraries Used</strong></h2>
 <ul class="incremental">
-<li><strong>{usethis}</strong>: 2.2.3: for project workflow automation</li>
+<li><strong>{usethis}</strong>: 3.1.0: for project workflow automation</li>
 <li><strong>{gitcreds}</strong>: 0.1.2: for querying git credentials</li>
-<li><strong>{gh}</strong>: 1.4.1: for querying the github api</li>
-<li><strong>{gert}</strong>: 2.0.1: optional R library approach for git commands</li>
+<li><strong>{gh}</strong>: 1.5.0: for querying the github api</li>
+<li><strong>{gert}</strong>: 2.1.5: optional R library approach for git commands</li>
 </ul>
 <section id="readings-and-preparation" class="level3">
 <h3 class="anchored" data-anchor-id="readings-and-preparation"><strong>Readings and Preparation</strong></h3>
@@ -761,14 +778,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="creating-a-local-directory-for-class" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-local-directory-for-class"><strong>Creating a Local Directory for Class</strong></h2>
-<p>Create a folder (aka directory) named <code>"dataviz"</code> (yes, all lowercase) on your computer. I recommend creating the directory someplace where you might not accidentally delete it. Create only one so as not to confuse yourself.</p>
+<p>Create a folder (aka directory) named <code>"dataviz"</code> (yes, all lowercase) on your computer. I recommend creating the directory someplace where you might not accidentally delete it. Create only one so as not to confuse yourself. This will serve as the directory within which you will store content for this course.</p>
 </section>
 <section id="connecting-the-repository-to-an-rstudio-project" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-the-repository-to-an-rstudio-project"><strong>Connecting the Repository to an RStudio Project</strong></h2>
-<p>You should already have a repository on GitHub named <em>“dataviz-exercises”</em> which you created from <a href="https://github.com/slicesofdata/start-project">this template repository</a>. You will now create an RStudio project and connect it to that remote repository on your GitHub account.</p>
+<p>You should already have a repository on GitHub named <em>“dataviz-exercises”</em> which you created from <a href="https://github.com/slicesofdata/start-rstudio-projects">this template repository</a>. You will now create an RStudio project and connect it to that remote repository on your GitHub account.</p>
 <p>When you create the project inside your class directory, your directory structure will look like this:</p>
-<pre><code>└── dataviz
-│   └── dataviz-exercises </code></pre>
+<pre><code>dataviz/
+└── dataviz-exercises (project root directory)</code></pre>
 <ol class="incremental" type="1">
 <li><p>In RStudio, <strong>File &gt; New Project &gt; Version Control &gt; Git</strong>.</p></li>
 <li><p>In the pop-up, you will see a request for the “repository URL”. Paste the URL of the GitHub repository. This URL will be the same as what you see on your GitHub account. However, we need to add <code>.git</code> to the end of it.</p></li>
@@ -788,18 +805,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 <p>If the repository already exists on GitHub (and it does in this instance) you should see RStudio flash a connection to GitHub and likely <em>pull</em> the repo contents down to your newly-created project directory. In this case, however, your local Git repository on RStudio will contain few files.</p>
-</section>
-<section id="unzipping-the-directory-structure" class="level2">
-<h2 class="anchored" data-anchor-id="unzipping-the-directory-structure"><strong>Unzipping the Directory Structure</strong></h2>
-<p>Although building the directory structure on your own is possible, the repository has a <code>.zip</code> file which contains all of the directories needed for the project. You can unzip them manually or do this in RStudio with the <code>"unzip_compressed_file.R"</code> script. The script has not been tested on a Mac so there may be an error.</p>
+<!--
+## **Unzipping the Directory Structure**
+
+Although building the directory structure on your own is possible, the repository has a `.zip` file which contains all of the directories needed for the project. You can unzip them manually or do this in RStudio with the `"unzip_compressed_file.R"` script. The script has not been tested on a Mac so there may be an error. 
+-->
 </section>
 <section id="understanding-the-directory-structure" class="level2">
 <h2 class="anchored" data-anchor-id="understanding-the-directory-structure"><strong>Understanding the Directory Structure</strong></h2>
-<p>Directory structures are used for organization. Each directory and sub directory has a purpose, which is to contain files of a certain type. As long as you know what the goal of the file is, you know where to save it. When working with teams, this common language avoids many problems.</p>
+<p>Directory structures are used for file organization. Each directory and sub directory has a purpose, which is to contain files of a certain type. As long as you know what the goal of the file is, you know where to save it. When working with teams, this common language avoids many problems.</p>
 <p>Although there are different ways to create project directory structures and different ways to name those directories, we will use the following structure. Not all directories will be used for all types of projects.</p>
 <p>Inside your <code>/dataviz/dataviz-exercises</code> directory your full project directory structure should look like the one below.</p>
-<pre><code>└── data
-│   └── interim 
+<pre><code>.                           (project root directory)
+└── data
 │   ├── processed
 │   └── raw
 ├── dataviz-exercises.Rproj (the R project file)
@@ -849,10 +867,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>/images</code> for <code>/report/images/</code>: containing image files (e.g., <code>.png</code>) for the report</li>
 </ul>
 <p>When testing your plots, you may wish to add notes or other written content that you can use in conjunction with your plots. In such cases, I recommend creating R Markdown files with meaningful names for taking notes. You can save these reports in the top-level of <code>/report</code> and then source your <code>.R</code> figure script</p>
-<p>Below are examples of an <code>.R</code> script for creating your visualizations and an <code>.Rmd</code> file that reads the .R script and renders the <code>.png</code> file within it. These files are also located under the <strong>Example Files &amp; Other</strong> course tab. Your team report will utilize this same structure, though details and files will be also located under the <a href="https://gabrielcook.xyz/dataviz24/project"><strong>Project</strong></a> course tab.</p>
+<p>Below are examples of an <code>.R</code> script for creating your visualizations and an <code>.Rmd</code> file that reads the .R script and renders the <code>.png</code> file within it. These files are also located under the <strong>Example Files &amp; Other</strong> course tab. Your team report will utilize this same structure, though details and files will be also located under the <a href="https://gabrielcook.xyz/dataviz25/project"><strong>Project</strong></a> course tab.</p>
 <ul class="incremental">
-<li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz24/main/exmaples/example-rmarkdown-file-with-fig-script.Rmd">example-rmarkdown-file-with-fig-script.Rmd</a></li>
-<li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz24/main/exmaples/example-figure-script.R">example-figure-script.R</a></li>
+<li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz25/main/exmaples/example-rmarkdown-file-with-fig-script.Rmd">example-rmarkdown-file-with-fig-script.Rmd</a></li>
+<li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz25/main/exmaples/example-figure-script.R">example-figure-script.R</a></li>
 </ul>
 <p>Moving forward, save all data to their relevant sub-directories within <code>/data</code>; create all <code>.R</code> code files and scripts in files in <code>/src</code>, including scripts use to create your visualizations and .png plot files; create all exercise or homework R Markdown files (e.g., <code>.Rmd</code>) in <code>/report</code>. Finally, any readings or references can can saved in <code>/refs</code> and any other document files can be saved in <code>/docs</code>. Reserve <code>/report/figs</code> for writing/saving plots or figures. All paths to directories and files for reading and writing files will be managed using the <code>{here}</code> library.</p>
 </section>
@@ -881,12 +899,12 @@ Session Information
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.4.1 (2024-06-14 ucrt)
+<pre><code>R version 4.5.1 (2025-06-13 ucrt)
 Platform: x86_64-w64-mingw32/x64
-Running under: Windows 11 x64 (build 22631)
+Running under: Windows 11 x64 (build 26100)
 
 Matrix products: default
-
+  LAPACK version 3.12.1
 
 locale:
 [1] LC_COLLATE=English_United States.utf8 
@@ -902,23 +920,26 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] htmltools_0.5.8.1 DT_0.33           vroom_1.6.5       lubridate_1.9.3  
- [5] forcats_1.0.0     stringr_1.5.1     dplyr_1.1.4       purrr_1.0.2      
- [9] readr_2.1.5       tidyr_1.3.1       tibble_3.2.1      ggplot2_3.5.1    
-[13] tidyverse_2.0.0  
+ [1] htmltools_0.5.8.1 DT_0.33           openxlsx_4.2.8    vroom_1.6.5      
+ [5] lubridate_1.9.4   forcats_1.0.0     stringr_1.5.1     dplyr_1.1.4      
+ [9] purrr_1.1.0       readr_2.1.5       tidyr_1.3.1       tibble_3.3.0     
+[13] ggplot2_3.5.2     tidyverse_2.0.0  
 
 loaded via a namespace (and not attached):
- [1] bit_4.0.5         gtable_0.3.5      jsonlite_1.8.8    crayon_1.5.3     
- [5] compiler_4.4.1    tidyselect_1.2.1  scales_1.3.0      yaml_2.3.10      
- [9] fastmap_1.2.0     here_1.0.1        R6_2.5.1          generics_0.1.3   
-[13] knitr_1.47        htmlwidgets_1.6.4 munsell_0.5.1     rprojroot_2.0.4  
-[17] tzdb_0.4.0        pillar_1.9.0      R.utils_2.12.3    rlang_1.1.4      
-[21] utf8_1.2.4        stringi_1.8.4     xfun_0.45         bit64_4.0.5      
-[25] timechange_0.3.0  cli_3.6.3         withr_3.0.1       magrittr_2.0.3   
-[29] digest_0.6.36     grid_4.4.1        rstudioapi_0.16.0 hms_1.1.3        
-[33] lifecycle_1.0.4   R.methodsS3_1.8.2 R.oo_1.26.0       vctrs_0.6.5      
-[37] evaluate_0.24.0   glue_1.7.0        fansi_1.0.6       colorspace_2.1-0 
-[41] rmarkdown_2.27    tools_4.4.1       pkgconfig_2.0.3  </code></pre>
+ [1] rappdirs_0.3.3     generics_0.1.4     stringi_1.8.7      hms_1.1.3         
+ [5] digest_0.6.37      magrittr_2.0.3     evaluate_1.0.4     grid_4.5.1        
+ [9] timechange_0.3.0   RColorBrewer_1.1-3 fastmap_1.2.0      R.oo_1.27.1       
+[13] rprojroot_2.1.0    jsonlite_2.0.0     zip_2.3.3          R.utils_2.13.0    
+[17] scales_1.4.0       httr2_1.2.1        cli_3.6.5          crayon_1.5.3      
+[21] rlang_1.1.6        R.methodsS3_1.8.2  gitcreds_0.1.2     bit64_4.6.0-1     
+[25] withr_3.0.2        yaml_2.3.10        tools_4.5.1        tzdb_0.5.0        
+[29] pacman_0.5.1       here_1.0.1         credentials_2.0.2  curl_6.4.0        
+[33] vctrs_0.6.5        R6_2.6.1           lifecycle_1.0.4    bit_4.6.0         
+[37] htmlwidgets_1.6.4  pkgconfig_2.0.3    pillar_1.11.0      gtable_0.3.6      
+[41] Rcpp_1.1.0         glue_1.8.0         gh_1.5.0           gert_2.1.5        
+[45] xfun_0.52          tidyselect_1.2.1   rstudioapi_0.17.1  sys_3.4.3         
+[49] knitr_1.50         farver_2.1.2       rmarkdown_2.29     compiler_4.5.1    
+[53] askpass_1.2.1      openssl_2.3.3     </code></pre>
 </div>
 </div>
 </div>
