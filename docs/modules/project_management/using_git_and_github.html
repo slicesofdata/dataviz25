@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel I. Cook">
-<meta name="dcterms.date" content="2025-08-21">
+<meta name="dcterms.date" content="2025-08-26">
 
 <title>Project Management 02: R Projects, Git, and GitHub</title>
 <style>
@@ -722,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 21, 2025</p>
+      <p class="date">August 26, 2025</p>
     </div>
   </div>
   
@@ -817,62 +817,62 @@ Although building the directory structure on your own is possible, the repositor
 <p>Although there are different ways to create project directory structures and different ways to name those directories, we will use the following structure. Not all directories will be used for all types of projects.</p>
 <p>Inside your <code>/dataviz/dataviz-exercises</code> directory your full project directory structure should look like the one below.</p>
 <pre><code>.                           (project root directory)
-└── data
-│   ├── processed
-│   └── raw
+└── data/
+│   ├── processed/
+│   └── raw/
 ├── dataviz-exercises.Rproj (the R project file)
-├── docs
+├── docs/
 ├── .gitignore              (a version-control gitignore file)
 ├── README.md               (a read me file)
-├── refs
-└── reports
-│   ├── figs
-│   └── images
-└── src
-│   ├── data
-│   ├── figs
-│   ├── functions
-│   └── utils</code></pre>
+├── refs/
+└── reports/
+│   ├── figs/
+│   └── images/
+└── src/
+│   ├── data/
+│   ├── figs/
+│   ├── functions/
+│   └── utils/</code></pre>
 <section id="directory-and-sub-directory-purpose" class="level3">
 <h3 class="anchored" data-anchor-id="directory-and-sub-directory-purpose"><strong>Directory and Sub-Directory Purpose</strong></h3>
 <p>The purpose of each directory and sub-directory is explained following the structure.</p>
 <ul class="incremental">
-<li><code>/data</code>: for raw/virgin data files and modified data files</li>
-<li><code>/docs</code>: for document files like the project description, any dictionary of variable names, etc.</li>
-<li><code>/refs</code>: for references, papers, reading materials, and other document</li>
-<li><code>/report</code>: for R Markdown (e.g., <code>.Rmd</code>) report files and their output file types (e.g., <code>.docx</code>, <code>.pdf</code>, <code>.html</code>)</li>
-<li><code>/src</code>: for all source <em>code</em> related files (e.g., <code>.R</code> scripts, functions, <code>.py</code> files, etc.). General scripts can be saved in the top level <code>/src</code> but most of your script files will be saved in <code>/src/figs</code> because you will create figures</li>
+<li><code>data/</code>: for raw/virgin data files and modified data files</li>
+<li><code>docs/</code>: for document files like the project description, any dictionary of variable names, etc. (this is different from )</li>
+<li><code>refs/</code>: for references, papers, reading materials, and other document</li>
+<li><code>report/</code>: for R Markdown (e.g., <code>.Rmd</code>) report files and their output file types (e.g., <code>.docx</code>, <code>.pdf</code>, <code>.html</code>)</li>
+<li><code>src/</code>: for all source <em>code</em> related files (e.g., <code>.R</code> scripts, functions, <code>.py</code> files, etc.). General scripts can be saved in the top level <code>src/</code> but most of your script files will be saved in <code>src/figs/</code> because you will create figures</li>
 </ul>
 <p>More directory descriptions are provided below.</p>
 <p><strong>Data Files</strong></p>
-<p>Inside <code>/data</code>, add the following sub-directories:</p>
+<p>Inside <code>data/</code>, add the following sub-directories:</p>
 <ul class="incremental">
-<li><code>/raw</code>, for <code>/data/raw/</code>: containing raw data files obtained from sources (e.g., <code>.csv</code>, <code>.tsv</code>, <code>.xlxs</code>)</li>
-<li><code>/interim</code>, for <code>/data/interim/</code>: <code>.Rds</code> (highly recommended) files containing intermediate transformed data; cleaned, merged, etc. but not processed fully to be in final form</li>
-<li><code>/processed</code>, for <code>/data/processed/</code>; <code>.Rds</code> (highly recommended) files containing finalized data (e.g., aggregated, summaries, and data frames ready for plotting</li>
+<li><code>raw/</code>, for <code>data/raw/</code>: containing raw data files obtained from sources (e.g., <code>.csv</code>, <code>.tsv</code>, <code>.xlxs</code>)</li>
+<li><code>interim/</code>, for <code>data/interim/</code>: <code>.Rds</code> (highly recommended) files containing intermediate transformed data; cleaned, merged, etc. but not processed fully to be in final form</li>
+<li><code>processed/</code>, for <code>data/processed/</code>; <code>.Rds</code> (highly recommended) files containing finalized data (e.g., aggregated, summaries, and data frames ready for plotting</li>
 </ul>
 <p><strong>NOTE:</strong> For this course, you will see me write data as <code>.Rds</code> files using the <code>saveRDS()</code> function because this format will preserve variable formatting which will affect plots.</p>
 <p><strong>WARNING:</strong> If you process and save those data files as <code>.csv</code>, <code>.xlsx</code>, or similar, you will likely find yourself working harder by recoding solutions you have already performed. I do not recommend this except for final versions that no longer require processing.</p>
 <p><strong>Source/Code Files</strong></p>
 <p>Inside <code>/src</code>, add the following sub-directories:</p>
 <ul class="incremental">
-<li><code>/data</code>, for <code>/src/data/</code>: containing <code>.R</code> scripts needed to download or generate data</li>
-<li><code>/figs</code>, for <code>/src/figs/</code>: containing <code>.R</code> scripts needed to create visualizations</li>
-<li><code>/functions</code>, for <code>/src/functions/</code>: containing all <code>.R</code> functions needed that do not belong to libraries</li>
+<li><code>data/</code>, for <code>src/data/</code>: containing <code>.R</code> scripts needed to download or generate data</li>
+<li><code>figs/</code>, for <code>src/figs/</code>: containing <code>.R</code> scripts needed to create visualizations</li>
+<li><code>functions/</code>, for <code>src/functions/</code>: containing all <code>.R</code> functions needed that do not belong to libraries</li>
 </ul>
 <p><strong>Files for Reports</strong></p>
-<p>Inside <code>/report</code>, add the following sub-directories:</p>
+<p>Inside <code>report/</code>, add the following sub-directories:</p>
 <ul class="incremental">
-<li><code>/figs</code> for <code>/report/figs/</code>: containing visualization files (e.g., <code>.png</code>) for the report</li>
-<li><code>/images</code> for <code>/report/images/</code>: containing image files (e.g., <code>.png</code>) for the report</li>
+<li><code>figs/</code> for <code>report/figs/</code>: containing visualization files (e.g., <code>.png</code>) for the report</li>
+<li><code>images/</code> for <code>report/images/</code>: containing image files (e.g., <code>.png</code>) for the report</li>
 </ul>
-<p>When testing your plots, you may wish to add notes or other written content that you can use in conjunction with your plots. In such cases, I recommend creating R Markdown files with meaningful names for taking notes. You can save these reports in the top-level of <code>/report</code> and then source your <code>.R</code> figure script</p>
+<p>When testing your plots, you may wish to add notes or other written content that you can use in conjunction with your plots. In such cases, I recommend creating R Markdown files with meaningful names for taking notes. You can save these reports in the top-level of <code>report/</code> and then source your <code>.R</code> figure script</p>
 <p>Below are examples of an <code>.R</code> script for creating your visualizations and an <code>.Rmd</code> file that reads the .R script and renders the <code>.png</code> file within it. These files are also located under the <strong>Example Files &amp; Other</strong> course tab. Your team report will utilize this same structure, though details and files will be also located under the <a href="https://gabrielcook.xyz/dataviz25/project"><strong>Project</strong></a> course tab.</p>
 <ul class="incremental">
 <li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz25/main/exmaples/example-rmarkdown-file-with-fig-script.Rmd">example-rmarkdown-file-with-fig-script.Rmd</a></li>
 <li><a href="https://raw.githubusercontent.com/slicesofdata/dataviz25/main/exmaples/example-figure-script.R">example-figure-script.R</a></li>
 </ul>
-<p>Moving forward, save all data to their relevant sub-directories within <code>/data</code>; create all <code>.R</code> code files and scripts in files in <code>/src</code>, including scripts use to create your visualizations and .png plot files; create all exercise or homework R Markdown files (e.g., <code>.Rmd</code>) in <code>/report</code>. Finally, any readings or references can can saved in <code>/refs</code> and any other document files can be saved in <code>/docs</code>. Reserve <code>/report/figs</code> for writing/saving plots or figures. All paths to directories and files for reading and writing files will be managed using the <code>{here}</code> library.</p>
+<p>Moving forward, save all data to their relevant sub-directories within <code>data/</code>; create all <code>.R</code> code files and scripts in files in <code>src/</code>, including scripts use to create your visualizations and .png plot files; create all exercise or homework R Markdown files (e.g., <code>.Rmd</code>) in <code>report/</code>. Finally, any readings or references can can saved in <code>refs/</code> and any other document files can be saved in <code>docs/</code>. Reserve <code>report/figs/</code> for writing/saving plots or figures. All paths to directories and files for reading and writing files will be managed using the <code>{here}</code> library.</p>
 </section>
 </section>
 <section id="summary" class="level2">
@@ -926,20 +926,17 @@ other attached packages:
 [13] ggplot2_3.5.2     tidyverse_2.0.0  
 
 loaded via a namespace (and not attached):
- [1] rappdirs_0.3.3     generics_0.1.4     stringi_1.8.7      hms_1.1.3         
- [5] digest_0.6.37      magrittr_2.0.3     evaluate_1.0.4     grid_4.5.1        
- [9] timechange_0.3.0   RColorBrewer_1.1-3 fastmap_1.2.0      R.oo_1.27.1       
-[13] rprojroot_2.1.0    jsonlite_2.0.0     zip_2.3.3          R.utils_2.13.0    
-[17] scales_1.4.0       httr2_1.2.1        cli_3.6.5          crayon_1.5.3      
-[21] rlang_1.1.6        R.methodsS3_1.8.2  gitcreds_0.1.2     bit64_4.6.0-1     
-[25] withr_3.0.2        yaml_2.3.10        tools_4.5.1        tzdb_0.5.0        
-[29] pacman_0.5.1       here_1.0.1         credentials_2.0.2  curl_6.4.0        
-[33] vctrs_0.6.5        R6_2.6.1           lifecycle_1.0.4    bit_4.6.0         
-[37] htmlwidgets_1.6.4  pkgconfig_2.0.3    pillar_1.11.0      gtable_0.3.6      
-[41] Rcpp_1.1.0         glue_1.8.0         gh_1.5.0           gert_2.1.5        
-[45] xfun_0.52          tidyselect_1.2.1   rstudioapi_0.17.1  sys_3.4.3         
-[49] knitr_1.50         farver_2.1.2       rmarkdown_2.29     compiler_4.5.1    
-[53] askpass_1.2.1      openssl_2.3.3     </code></pre>
+ [1] generics_0.1.4     stringi_1.8.7      hms_1.1.3          digest_0.6.37     
+ [5] magrittr_2.0.3     evaluate_1.0.4     grid_4.5.1         timechange_0.3.0  
+ [9] RColorBrewer_1.1-3 fastmap_1.2.0      R.oo_1.27.1        rprojroot_2.1.0   
+[13] jsonlite_2.0.0     R.utils_2.13.0     zip_2.3.3          scales_1.4.0      
+[17] cli_3.6.5          rlang_1.1.6        crayon_1.5.3       R.methodsS3_1.8.2 
+[21] bit64_4.6.0-1      withr_3.0.2        yaml_2.3.10        tools_4.5.1       
+[25] tzdb_0.5.0         pacman_0.5.1       here_1.0.1         vctrs_0.6.5       
+[29] R6_2.6.1           lifecycle_1.0.4    htmlwidgets_1.6.4  bit_4.6.0         
+[33] pkgconfig_2.0.3    pillar_1.11.0      gtable_0.3.6       glue_1.8.0        
+[37] Rcpp_1.1.0         xfun_0.52          tidyselect_1.2.1   rstudioapi_0.17.1 
+[41] knitr_1.50         farver_2.1.2       rmarkdown_2.29     compiler_4.5.1    </code></pre>
 </div>
 </div>
 </div>
