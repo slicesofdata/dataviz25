@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="R Basic Refresher and Catch-Up for PSYC 167">
 
-<title>R Basics and Refreshers</title>
+<title>Git Team Exercise: Safe Collaboration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +103,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" href="../../css/nav.css">
-<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -87,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><strong>Home</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../schedule/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../schedule/index.html" aria-current="page"> 
 <span class="menu-text"><strong>Schedule</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../modules/index.html"> 
+    <a class="nav-link" href="../modules/index.html"> 
 <span class="menu-text"><strong>Modules</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/index.html"> 
+    <a class="nav-link" href="../project/index.html"> 
 <span class="menu-text"><strong>Project</strong></span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -108,15 +141,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="../../slides/01_intro_rstudio_rmarkdown_slides.html">
+    <a class="dropdown-item" href="../slides/01_intro_rstudio_rmarkdown_slides.html">
  <span class="dropdown-text">R, RStudio, &amp; R Markdown</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../slides/02_git_slides.html">
+    <a class="dropdown-item" href="../slides/02_git_slides.html">
  <span class="dropdown-text">Git and GitHub</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../slides/03_functions_slides.html">
+    <a class="dropdown-item" href="../slides/03_functions_slides.html">
  <span class="dropdown-text">Functions, Parameters, and Arguments</span></a>
   </li>  
     </ul>
@@ -127,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-hw">    
         <li>
-    <a class="dropdown-item" href="../../homework/hw01.pdf">
+    <a class="dropdown-item" href="../homework/hw01.pdf">
  <span class="dropdown-text">HW 01</span></a>
   </li>  
         <li class="dropdown-header">HW 02</li>
@@ -148,11 +181,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
         <li class="dropdown-header">Select Files</li>
         <li>
-    <a class="dropdown-item" href="../../exercises/team-project-git-setup-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/team-project-git-setup-exercise.pdf">
  <span class="dropdown-text">team-project-git-setup-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../exercises/2025_grouping_and_summarizing_exercise.pdf">
+    <a class="dropdown-item" href="../exercises/2025_grouping_and_summarizing_exercise.pdf">
  <span class="dropdown-text">grouping_and_summarizing_exercise.pdf</span></a>
   </li>  
     </ul>
@@ -163,23 +196,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
         <li>
-    <a class="dropdown-item" href="../../data/baby-names-2008.csv">
+    <a class="dropdown-item" href="../data/baby-names-2008.csv">
  <span class="dropdown-text">baby-names-2008.csv</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../data/cms-top-all-time-2023-swim.xlsx">
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.xlsx">
  <span class="dropdown-text">cms-top-all-time-2023-swim.xlsx (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../data/cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cms-top-all-time-2023-swim.csv (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../data/processed/cleaned-cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../data/processed/cleaned-cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cleaned-cms-top-all-time-2023-swim.csv (/data/processed)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../data/processed/cleaned-2023-cms-invite.csv">
+    <a class="dropdown-item" href="../data/processed/cleaned-2023-cms-invite.csv">
  <span class="dropdown-text">cleaned-2023-cms-invite.csv (/data/processed)</span></a>
   </li>  
         <li>
@@ -198,15 +231,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-example-files--other">    
         <li>
-    <a class="dropdown-item" href="../../resources/tools.html">
+    <a class="dropdown-item" href="../resources/tools.html">
  <span class="dropdown-text"><strong>Other Tools/Resources</strong></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../examples/example-figure-script.R">
+    <a class="dropdown-item" href="../examples/example-figure-script.R">
  <span class="dropdown-text">example-figure-script.R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../examples/example-rmarkdown-file-with-fig-script.Rmd">
+    <a class="dropdown-item" href="../examples/example-rmarkdown-file-with-fig-script.Rmd">
  <span class="dropdown-text">example-rmarkdown-file-with-fig-script.Rmd</span></a>
   </li>  
     </ul>
@@ -217,11 +250,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cheatsheets">    
         <li>
-    <a class="dropdown-item" href="../../cheatsheets_and_tips/symbols.html">
+    <a class="dropdown-item" href="../cheatsheets_and_tips/symbols.html">
  <span class="dropdown-text">Symbols</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../cheatsheets/rmarkdown-2.0.pdf">
+    <a class="dropdown-item" href="../cheatsheets/rmarkdown-2.0.pdf">
  <span class="dropdown-text">RMarkdown</span></a>
   </li>  
         <li>
@@ -241,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Reading and Writing Data with {readr}</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../cheatsheets/Data_Science_With_R_Workflow.pdf">
+    <a class="dropdown-item" href="../cheatsheets/Data_Science_With_R_Workflow.pdf">
  <span class="dropdown-text">Data Science with RWorkflow</span></a>
   </li>  
         <li>
@@ -276,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules_setup/index.html"><b>Installation, Setup, &amp; R Basics</b></a></li><li class="breadcrumb-item"><a href="../../modules_setup/R Basics/index.html"><b>R Basics and Refreshers</b></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/new_07_using_git_with_branches.html">Git Team Exercise: Safe Collaboration</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -290,30 +323,30 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../syllabus/syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus/syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Syllabus</strong></span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../schedule/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../schedule/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Schedule</strong></span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../modules_setup/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../modules_setup/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Installation, Setup, &amp; R Basics</b></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../modules_setup/Installation &amp; Setup/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../modules_setup/Installation &amp; Setup/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Installation &amp; Setup</b></span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -322,13 +355,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/Installation &amp; Setup/installing_r_and_rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/Installation &amp; Setup/installing_r_and_rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Installing R &amp; RStudio</b></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/Installation &amp; Setup/installing_git.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/Installation &amp; Setup/installing_git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Installing Git</strong></span></a>
   </div>
 </li>
@@ -336,34 +369,34 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../modules_setup/R Basics/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../modules_setup/R Basics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>R Basics and Refreshers</b></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/R Basics/introduction_to_r_rstudio_and_rmarkdown.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/R Basics/introduction_to_r_rstudio_and_rmarkdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to RStudio, R Markdown, &amp; Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/R Basics/functions_and_scripts.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/R Basics/functions_and_scripts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions, Arguments, and R scripts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/R Basics/vectors_and_data_frame_basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/R Basics/vectors_and_data_frame_basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors and data frame basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules_setup/R Basics/reading_data_files.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules_setup/R Basics/reading_data_files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading data files</span></a>
   </div>
 </li>
@@ -374,7 +407,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../modules/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../modules/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Modules</b></span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -383,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../modules/project_management/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../modules/project_management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Project Management</b></span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -392,13 +425,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/project_management/setting_up_git_and_github.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/project_management/setting_up_git_and_github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Management 01</strong>: Setting Up Git and GitHub for R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/project_management/using_git_and_github.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/project_management/using_git_and_github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Management 02</strong>: R Projects, Git, and GitHub</span></a>
   </div>
 </li>
@@ -406,133 +439,133 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/graphical_perception.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/graphical_perception.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Graphical perception</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/data_frame_manipulation_and_wrangling.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/data_frame_manipulation_and_wrangling.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Data frame manipulation and wrangling</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/data_subsets_and_summaries.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/data_subsets_and_summaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Data subsets and summaries</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/considerations_in_data_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/considerations_in_data_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Considerations in data visualization</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/designing_perceptually_efficient_visualizations.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/designing_perceptually_efficient_visualizations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Designing perceptually-efficient visualizations</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/ggplot_and_the_grammar_of_graphics.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/ggplot_and_the_grammar_of_graphics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong><code>{ggplot2}</code>: The Grammar of Graphics</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/visualizing_associations.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/visualizing_associations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Visualizing associations</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/spatial_position_and_adjustment.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/spatial_position_and_adjustment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Spatial position and adjustment</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/visualizing_amounts.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/visualizing_amounts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Visualizing amounts</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/color_scales_and_palettes.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/color_scales_and_palettes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Color scales and palettes</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/histograms_and_density_plots.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/histograms_and_density_plots.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Histograms and density plots</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/coordinates_axes_and_position_scales.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/coordinates_axes_and_position_scales.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Coordinates, axes, and position scales</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/statistical_transformations.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/statistical_transformations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Statistical transformations</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/visualizing_more_distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/visualizing_more_distributions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Visualizing more distributions</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/visualizing_uncertainty.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/visualizing_uncertainty.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Visualizing uncertainty</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/legends_and_arrangement.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/legends_and_arrangement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Legends and arrangement</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/visualizing_trends.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/visualizing_trends.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Visualizing trends</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/multi_panel_plots_faceting.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/multi_panel_plots_faceting.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Multi-panel plots: Faceting</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/annotation_and_text.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/annotation_and_text.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Annotation and text</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/attentional_control.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/attentional_control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Attentional control</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/themes.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/themes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Bonus: Theme and figure design</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/titles_captions_and_tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/titles_captions_and_tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Title, Captions, and Tables</strong></span></a>
   </div>
 </li>
@@ -541,52 +574,52 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../project/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../project/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><b>Project</b></span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/01_project_directory_structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/01_project_directory_structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Directory Structure</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/02_project_team_roles.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/02_project_team_roles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Team membership and roles</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/03_project_midterm.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/03_project_midterm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Midterm presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/04_project_final.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/04_project_final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Presentation</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/05_project_report.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/05_project_report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Report</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Tasks</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Git Team Exercise: Safe Collaboration</span></a>
   </div>
 </li>
@@ -602,24 +635,33 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="incremental">
-  <li><a href="#setup-structure" id="toc-setup-structure" class="nav-link active" data-scroll-target="#setup-structure">Setup Structure</a></li>
-  <li><a href="#other-setup-topics" id="toc-other-setup-topics" class="nav-link" data-scroll-target="#other-setup-topics">Other Setup Topics</a></li>
+  <li><a href="#git-exercise-safe-collaboration-with-multiple-students" id="toc-git-exercise-safe-collaboration-with-multiple-students" class="nav-link active" data-scroll-target="#git-exercise-safe-collaboration-with-multiple-students">Git Exercise: Safe Collaboration with Multiple Students</a>
+  <ul class="incremental collapse">
+  <li><a href="#step-1-clone-the-repository" id="toc-step-1-clone-the-repository" class="nav-link" data-scroll-target="#step-1-clone-the-repository">Step 1: Clone the Repository</a></li>
+  <li><a href="#step-2-create-or-switch-to-a-branch" id="toc-step-2-create-or-switch-to-a-branch" class="nav-link" data-scroll-target="#step-2-create-or-switch-to-a-branch">Step 2: Create or Switch to a Branch</a></li>
+  <li><a href="#step-3-add-work-in-the-correct-folder" id="toc-step-3-add-work-in-the-correct-folder" class="nav-link" data-scroll-target="#step-3-add-work-in-the-correct-folder">Step 3: Add Work in the Correct Folder</a>
+  <ul class="incremental collapse">
+  <li><a href="#student-1-data-file" id="toc-student-1-data-file" class="nav-link" data-scroll-target="#student-1-data-file">Student 1: Data file</a></li>
+  <li><a href="#student-2-data-cleaning-script" id="toc-student-2-data-cleaning-script" class="nav-link" data-scroll-target="#student-2-data-cleaning-script">Student 2: Data cleaning script</a></li>
+  <li><a href="#student-3-plot-script" id="toc-student-3-plot-script" class="nav-link" data-scroll-target="#student-3-plot-script">Student 3: Plot script</a></li>
+  <li><a href="#student-4-quarto-webpage" id="toc-student-4-quarto-webpage" class="nav-link" data-scroll-target="#student-4-quarto-webpage">Student 4: Quarto webpage</a></li>
+  </ul></li>
+  <li><a href="#step-4-sync-safely-with-remote-repository" id="toc-step-4-sync-safely-with-remote-repository" class="nav-link" data-scroll-target="#step-4-sync-safely-with-remote-repository">Step 4: Sync Safely with Remote Repository</a></li>
+  <li><a href="#step-5-merging-into-main-instructor-or-team-lead" id="toc-step-5-merging-into-main-instructor-or-team-lead" class="nav-link" data-scroll-target="#step-5-merging-into-main-instructor-or-team-lead">Step 5: Merging into Main (Instructor or Team Lead)</a></li>
+  <li><a href="#summary-of-safe-practices" id="toc-summary-of-safe-practices" class="nav-link" data-scroll-target="#summary-of-safe-practices">Summary of Safe Practices</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules_setup/index.html"><b>Installation, Setup, &amp; R Basics</b></a></li><li class="breadcrumb-item"><a href="../../modules_setup/R Basics/index.html"><b>R Basics and Refreshers</b></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/new_07_using_git_with_branches.html">Git Team Exercise: Safe Collaboration</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><b>R Basics and Refreshers</b></h1>
+<h1 class="title">Git Team Exercise: Safe Collaboration</h1>
 </div>
 
-<div>
-  <div class="description">
-    R Basic Refresher and Catch-Up for PSYC 167
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -634,20 +676,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>For this course, we use the R programming language. Although you may have a preferred IDE, my recommendation is to use RStudio. All instructions will assume you are using RStudio. We will also use the R Markdown language for report documents. Projects will be managed at GitHub and will interface with RStudio using the Git program.</p>
-<section id="setup-structure" class="level2">
-<h2 class="anchored" data-anchor-id="setup-structure">Setup Structure</h2>
+<section id="git-exercise-safe-collaboration-with-multiple-students" class="level1">
+<h1>Git Exercise: Safe Collaboration with Multiple Students</h1>
+<p>This exercise walks through a <strong>safe Git workflow</strong> for a team of 4 students. Each student contributes a different type of file:</p>
 <ul class="incremental">
-<li>Install R and RStudio</li>
-<li>Create a GitHub account if you do not have one</li>
-<li>Install Git if your computer system needs it (e.g., not installed)</li>
+<li><strong>Student 1</strong>: Data file (<code>data/raw/data.csv</code>)</li>
+<li><strong>Student 2</strong>: Data cleaning script (<code>src/data/clean_data.R</code>)</li>
+<li><strong>Student 3</strong>: Plot script (<code>src/figs/make_plot.R</code>)</li>
+<li><strong>Student 4</strong>: Quarto webpage (<code>pages/report.qmd</code>) referencing a saved PNG figure (<code>figs/plot.png</code>)</li>
 </ul>
+<p>The focus is on <strong>fetching before merging</strong> to avoid conflicts and working safely without overwriting.</p>
+<hr>
+<section id="step-1-clone-the-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-clone-the-repository">Step 1: Clone the Repository</h2>
+<p>Each student first clones the repository:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/example-org/class-project.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> class-project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="other-setup-topics" class="level2">
-<h2 class="anchored" data-anchor-id="other-setup-topics">Other Setup Topics</h2>
-<p>For those requiring refreshers about R Markdown, functions, and scripts are in this section.</p>
+<section id="step-2-create-or-switch-to-a-branch" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-or-switch-to-a-branch">Step 2: Create or Switch to a Branch</h2>
+<p>Each student works on their own branch to avoid overwriting files.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student1-data      <span class="co"># Student 1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student2-cleaning   <span class="co"># Student 2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student3-plot       <span class="co"># Student 3</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student4-report     <span class="co"># Student 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="step-3-add-work-in-the-correct-folder" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-add-work-in-the-correct-folder">Step 3: Add Work in the Correct Folder</h2>
+<section id="student-1-data-file" class="level3">
+<h3 class="anchored" data-anchor-id="student-1-data-file">Student 1: Data file</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your file as data/raw/data.csv</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add data/raw/data.csv</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add raw data file"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-2-data-cleaning-script" class="level3">
+<h3 class="anchored" data-anchor-id="student-2-data-cleaning-script">Student 2: Data cleaning script</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your script as src/data/clean_data.R</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/data/clean_data.R</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data cleaning script"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-3-plot-script" class="level3">
+<h3 class="anchored" data-anchor-id="student-3-plot-script">Student 3: Plot script</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your script as src/figs/make_plot.R</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure it saves a PNG figure in figs/plot.png</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/figs/make_plot.R figs/plot.png</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot script and saved PNG"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-4-quarto-webpage" class="level3">
+<h3 class="anchored" data-anchor-id="student-4-quarto-webpage">Student 4: Quarto webpage</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your report in pages/report.qmd</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure it references figs/plot.png in the text</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add pages/report.qmd</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add report referencing plot"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="step-4-sync-safely-with-remote-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-sync-safely-with-remote-repository">Step 4: Sync Safely with Remote Repository</h2>
+<p>Before pushing changes, always <strong>fetch first</strong> to see if others have updated the repo:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul class="incremental">
+<li><p>If there are <strong>no new changes</strong> on the remote branch, you can push safely:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin student1-data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>If there <strong>are new changes</strong>, merge them into your branch before pushing:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge origin/main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>⚠️ <strong>Warning</strong>: If you use <code>git pull</code> directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using <code>git fetch</code> first is safer, because you see what’s new <strong>before merging</strong>.</p>
+<hr>
+</section>
+<section id="step-5-merging-into-main-instructor-or-team-lead" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-merging-into-main-instructor-or-team-lead">Step 5: Merging into Main (Instructor or Team Lead)</h2>
+<p>The instructor (or team lead) will merge student branches into <code>main</code> one at a time:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge origin/student1-data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Repeat for <code>student2-cleaning</code>, <code>student3-plot</code>, <code>student4-report</code>.</p>
+<hr>
+</section>
+<section id="summary-of-safe-practices" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-safe-practices">Summary of Safe Practices</h2>
+<ul class="incremental">
+<li>Work in <strong>separate branches</strong>.</li>
+<li>Place files in <strong>designated folders</strong>.</li>
+<li>Use <strong><code>git fetch</code> before merging</strong> (safer than pull).</li>
+<li>Only instructor merges to <strong>main</strong>.</li>
+<li>Avoid working directly on <strong>main</strong> branch.</li>
+</ul>
+<hr>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>After merging, open the webpage:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render pages/report.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will include the cleaned data, generated figure, and student contributions combined.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
