@@ -2310,7 +2310,7 @@
     "href": "modules/project_management/using_git_and_github.html",
     "title": "Project Management 02: R Projects, Git, and GitHub",
     "section": "",
-    "text": "This module focuses on getting organized. Rather than save files in a haphazard way that will just introduce stress to your life, we will focus on creating order. The best way to create order and stay organized is to 1) create projects in RStudio, 2) create directories and sub-directories that leave no ambiguity about where your files are, and 3) manage all directory paths and file paths simply using the {here} library. Another way is to connect that project with a remote repository saved someplace like GitHub for collaboration. In certain classes (and for your team project), you will use Git to interact with remote repositories connected to Projects in RStudio.\nIn order to maintain organization for this class and the project, you will set up a class folder (aka directory) on your computer. You will then create an RStudio project and connect it to a remote private repository on your GitHub account. The reason for its privacy is because of data related to certain exercises.\nYou will use this RStudio project for all class exercises and homework so that there is no ambiguity about where your files are saved. Finally, you will create directories within your new project directory so that you have an organized directory structure for storing your files. Systems paths for project files and directories will be manage using the {here} library. This process will also ensure that each student’s computer is configured in the same manner.\nReading through these steps, however, will facilitate your ability to apply the concepts and run the associated functions in class. Thus, all students will gain some basic experience with Git commands and a remote repository. Students will be collaborators of a repository for their team project. Coding leads will carry the responsibility of maintaining the organization of the team’s private repository.",
+    "text": "The content provided here and in other modules is to help you. I expect you to read it. You certainly don’t have to read it but you will be held accountable for it anyway.\nThis module focuses on getting organized. Rather than save files in a haphazard way that will just introduce stress to your life, we will focus on creating order. The best way to create order and stay organized is to 1) create projects in RStudio, 2) create directories and sub-directories that leave no ambiguity about where your files are, and 3) manage all directory paths and file paths simply using the {here} library. Another way is to connect that project with a remote repository saved someplace like GitHub for collaboration. In certain classes (and for your team project), you will use Git to interact with remote repositories connected to Projects in RStudio.\nIn order to maintain organization for this class and the project, you will set up a class folder (aka directory) on your computer. You will then create an RStudio project and connect it to a remote private repository on your GitHub account. The reason for its privacy is because of data related to certain exercises.\nYou will use this RStudio project for all class exercises and homework so that there is no ambiguity about where your files are saved. Finally, you will create directories within your new project directory so that you have an organized directory structure for storing your files. Systems paths for project files and directories will be manage using the {here} library. This process will also ensure that each student’s computer is configured in the same manner.\nReading through these steps, however, will facilitate your ability to apply the concepts and run the associated functions in class. Thus, all students will gain some basic experience with Git commands and a remote repository. Students will be collaborators of a repository for their team project. Coding leads will carry the responsibility of maintaining the organization of the team’s private repository.",
     "crumbs": [
       "**Schedule**",
       "<b>Modules</b>",
@@ -2323,7 +2323,7 @@
     "href": "modules/project_management/using_git_and_github.html#overview",
     "title": "Project Management 02: R Projects, Git, and GitHub",
     "section": "",
-    "text": "This module focuses on getting organized. Rather than save files in a haphazard way that will just introduce stress to your life, we will focus on creating order. The best way to create order and stay organized is to 1) create projects in RStudio, 2) create directories and sub-directories that leave no ambiguity about where your files are, and 3) manage all directory paths and file paths simply using the {here} library. Another way is to connect that project with a remote repository saved someplace like GitHub for collaboration. In certain classes (and for your team project), you will use Git to interact with remote repositories connected to Projects in RStudio.\nIn order to maintain organization for this class and the project, you will set up a class folder (aka directory) on your computer. You will then create an RStudio project and connect it to a remote private repository on your GitHub account. The reason for its privacy is because of data related to certain exercises.\nYou will use this RStudio project for all class exercises and homework so that there is no ambiguity about where your files are saved. Finally, you will create directories within your new project directory so that you have an organized directory structure for storing your files. Systems paths for project files and directories will be manage using the {here} library. This process will also ensure that each student’s computer is configured in the same manner.\nReading through these steps, however, will facilitate your ability to apply the concepts and run the associated functions in class. Thus, all students will gain some basic experience with Git commands and a remote repository. Students will be collaborators of a repository for their team project. Coding leads will carry the responsibility of maintaining the organization of the team’s private repository.",
+    "text": "The content provided here and in other modules is to help you. I expect you to read it. You certainly don’t have to read it but you will be held accountable for it anyway.\nThis module focuses on getting organized. Rather than save files in a haphazard way that will just introduce stress to your life, we will focus on creating order. The best way to create order and stay organized is to 1) create projects in RStudio, 2) create directories and sub-directories that leave no ambiguity about where your files are, and 3) manage all directory paths and file paths simply using the {here} library. Another way is to connect that project with a remote repository saved someplace like GitHub for collaboration. In certain classes (and for your team project), you will use Git to interact with remote repositories connected to Projects in RStudio.\nIn order to maintain organization for this class and the project, you will set up a class folder (aka directory) on your computer. You will then create an RStudio project and connect it to a remote private repository on your GitHub account. The reason for its privacy is because of data related to certain exercises.\nYou will use this RStudio project for all class exercises and homework so that there is no ambiguity about where your files are saved. Finally, you will create directories within your new project directory so that you have an organized directory structure for storing your files. Systems paths for project files and directories will be manage using the {here} library. This process will also ensure that each student’s computer is configured in the same manner.\nReading through these steps, however, will facilitate your ability to apply the concepts and run the associated functions in class. Thus, all students will gain some basic experience with Git commands and a remote repository. Students will be collaborators of a repository for their team project. Coding leads will carry the responsibility of maintaining the organization of the team’s private repository.",
     "crumbs": [
       "**Schedule**",
       "<b>Modules</b>",
@@ -2349,7 +2349,7 @@
     "href": "modules/project_management/using_git_and_github.html#creating-a-local-directory-for-class",
     "title": "Project Management 02: R Projects, Git, and GitHub",
     "section": "Creating a Local Directory for Class",
-    "text": "Creating a Local Directory for Class\nCreate a folder (aka directory) named \"dataviz\" (yes, all lowercase) on your computer. I recommend creating the directory someplace where you might not accidentally delete it. Create only one so as not to confuse yourself. This will serve as the directory within which you will store content for this course.",
+    "text": "Creating a Local Directory for Class\nCreate a folder (aka directory) named \"dataviz\" (yes, all lowercase) on your computer. This will serve as the course uber directory. The file and directory names I provide you are designed to help you and help me understand your organizational structure for the course and associated projects. After teaching the course several times, some students decide to name the directory something else. Please don’t. If you name your directory something other than instructed and I see it, 5% will come off the top of your final grade. Full stop, no questions asked.\nWhere do you create the directory? This depends on your preferred system. I recommend creating it someplace where you might not accidentally delete it. Create only one directory so as not to confuse yourself. This directory will serve as the directory within which you will store all content for this course.",
     "crumbs": [
       "**Schedule**",
       "<b>Modules</b>",
@@ -2362,7 +2362,7 @@
     "href": "modules/project_management/using_git_and_github.html#connecting-the-repository-to-an-rstudio-project",
     "title": "Project Management 02: R Projects, Git, and GitHub",
     "section": "Connecting the Repository to an RStudio Project",
-    "text": "Connecting the Repository to an RStudio Project\nYou should already have a repository on GitHub named “dataviz-exercises” which you created from this template repository. You will now create an RStudio project and connect it to that remote repository on your GitHub account.\nWhen you create the project inside your class directory, your directory structure will look like this:\ndataviz/\n└── dataviz-exercises (project root directory)\n\nIn RStudio, File &gt; New Project &gt; Version Control &gt; Git.\nIn the pop-up, you will see a request for the “repository URL”. Paste the URL of the GitHub repository. This URL will be the same as what you see on your GitHub account. However, we need to add .git to the end of it.\n\n    https://github.com/&lt;your_github_username&gt;/dataviz-exercises.git\n\nWhen you create the project, a directory will be created as a sub-directory of your main /dataviz directory. Thus, you will see /dataviz/dataviz-exercises.\n\nWARNING: Do not create the project inside of an existing project’s directory.\nNote: I recommend that you also select “Open in new session” in order to compartmentalize projects. When you work on the team project, open the project. When you work on your homework or other class exercises, open your homework project.\n\nClick “Create Project” to create the new project directory, which will create:\n\na project directory on your computer\na project file with file extension .Rproj\na Git repository or link to the remote GitHub repository for the project (also an RStudio Project)\n\n\nIf the repository already exists on GitHub (and it does in this instance) you should see RStudio flash a connection to GitHub and likely pull the repo contents down to your newly-created project directory. In this case, however, your local Git repository on RStudio will contain few files.",
+    "text": "Connecting the Repository to an RStudio Project\nYou should already have a repository on GitHub named “dataviz-exercises” which you created from this template repository. You will now create an RStudio project and connect it to that remote repository on your GitHub account. If you named your GitHub repo something else, I will expect you to complete the process again with the correct name.\n\nIn RStudio, File &gt; New Project &gt; Version Control &gt; Git.\nIn the pop-up window, you will see a request for the “repository URL”. Paste the URL of the GitHub repository. This URL will be the same as what you see on your GitHub account. However, we need to add .git to the end of it.\n\n  https://github.com/&lt;your_github_username&gt;/dataviz-exercises.git\n\nSpecify the location of your uber directory, dataviz/ to create this as a sub-directory. We know that dataviz/ is simply a directory for your course files and it is not another RStudio project. If you have other projects, do not create a project inside of an existing project’s directory or you will have problems.\n\nYour directory structure will look like structure seen below. The project will be nested in dataviz/. We will both know where to find it.\ndataviz/\n└── dataviz-exercises/ (project root directory)\nNote: I recommend that you also select “Open in new session” in order to compartmentalize projects. When you work on the team project, open the project. When you work on your homework or other class exercises, open your homework project.\n\nClick “Create Project” to create the new project directory, which will create:\n\na project directory on your computer\na project file with file extension .Rproj\na Git repository or link to the remote GitHub repository for the project (also an RStudio Project)\n\n\nIf the repository already exists on GitHub (and it does in this instance) you should see RStudio flash a connection to GitHub and likely pull the repo contents down to your newly-created project directory. In this case, however, your local Git repository on RStudio will contain few files.",
     "crumbs": [
       "**Schedule**",
       "<b>Modules</b>",
@@ -2414,7 +2414,7 @@
     "href": "syllabus/syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Semester\nFall 2025\n\n\nSection\nPSYC 167\n\n\nDay Time\nT/R 11:00-12:15 pm (Pacific)\n\n\nLocation\nLocation: Roberts North, 105\n\n\nOffice Hours\nT/R: 12:15-1:15pm; Adams 110\n\n\nInstructor\nGabriel I. Cook\n\n\nContact\nDiscord (preferred) or Email: gcook@CMC.edu (please put ’PSYC 167 in subject line)\n\n\nCredit\n3 hours; 1 credits",
+    "text": "Semester\nFall 2025\n\n\nSection\nPSYC 167\n\n\nDay Time\nT/R 11:00-12:15 pm (Pacific)\n\n\nLocation\nLocation: Roberts North, 105\n\n\nOffice Hours\nT: 12:15-12:45pm; F: 9-10am; Adams 110\n\n\nInstructor\nGabriel I. Cook\n\n\nContact\nDiscord (preferred) or Email: gcook@CMC.edu (please put ’PSYC 167 in subject line)\n\n\nCredit\n3 hours; 1 credits",
     "crumbs": [
       "**Schedule**",
       "**Syllabus**"
@@ -2425,7 +2425,7 @@
     "href": "syllabus/syllabus.html#course-details",
     "title": "Syllabus",
     "section": "",
-    "text": "Semester\nFall 2025\n\n\nSection\nPSYC 167\n\n\nDay Time\nT/R 11:00-12:15 pm (Pacific)\n\n\nLocation\nLocation: Roberts North, 105\n\n\nOffice Hours\nT/R: 12:15-1:15pm; Adams 110\n\n\nInstructor\nGabriel I. Cook\n\n\nContact\nDiscord (preferred) or Email: gcook@CMC.edu (please put ’PSYC 167 in subject line)\n\n\nCredit\n3 hours; 1 credits",
+    "text": "Semester\nFall 2025\n\n\nSection\nPSYC 167\n\n\nDay Time\nT/R 11:00-12:15 pm (Pacific)\n\n\nLocation\nLocation: Roberts North, 105\n\n\nOffice Hours\nT: 12:15-12:45pm; F: 9-10am; Adams 110\n\n\nInstructor\nGabriel I. Cook\n\n\nContact\nDiscord (preferred) or Email: gcook@CMC.edu (please put ’PSYC 167 in subject line)\n\n\nCredit\n3 hours; 1 credits",
     "crumbs": [
       "**Schedule**",
       "**Syllabus**"
@@ -3091,92 +3091,266 @@
     "text": "Books\n\nLots of alternative books https://www.bigbookofr.com/data-visualization.html"
   },
   {
-    "objectID": "project/index.html",
-    "href": "project/index.html",
-    "title": "Project",
+    "objectID": "project/06_project_tasks_webpage.html",
+    "href": "project/06_project_tasks_webpage.html",
+    "title": "Project Tasks",
     "section": "",
-    "text": "For the project, your team will write code in order to prepare, model, and visualize data in order to communicate a story that would address the question(s) proposed by the participating body (viz., liaison). Each project will differ but there will be similarities across projects, for example, cleaning data, managing variables, creating data summaries, creating visualizations, telling a coherent story, etc.\nEach project has a primary goal which is necessary to include for the final deliverable. If the team can adequately deliver the primary goal, additional goals can be worked on by eager teams. There may be exploratory components, which would allow for a healthy dose of flexibility in team creativity. Exploratory elements, however, should be discussed carefully with project liaisons.\nNOTE: All code will be written in R and all tasks will need to be reproducible. Anything that you do manually without code will not be reproducible.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#project-description",
-    "href": "project/index.html#project-description",
-    "title": "Project",
-    "section": "",
-    "text": "For the project, your team will write code in order to prepare, model, and visualize data in order to communicate a story that would address the question(s) proposed by the participating body (viz., liaison). Each project will differ but there will be similarities across projects, for example, cleaning data, managing variables, creating data summaries, creating visualizations, telling a coherent story, etc.\nEach project has a primary goal which is necessary to include for the final deliverable. If the team can adequately deliver the primary goal, additional goals can be worked on by eager teams. There may be exploratory components, which would allow for a healthy dose of flexibility in team creativity. Exploratory elements, however, should be discussed carefully with project liaisons.\nNOTE: All code will be written in R and all tasks will need to be reproducible. Anything that you do manually without code will not be reproducible.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#team-membership-and-roles",
-    "href": "project/index.html#team-membership-and-roles",
-    "title": "Project",
-    "section": "Team Membership and Roles",
-    "text": "Team Membership and Roles\nA team of students will work with a project liaison to develop the project and work together to produce the midterm and final deliverables. Rather than having all students in charge of all duties, team members should consider delegating tasks and various types of workloads to students who are best equipped to handle them either because of ability or because of interest and desire. Teams are to meet weekly and members are to complete individual work log reports, which are used for final grading.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#team-meetings",
-    "href": "project/index.html#team-meetings",
-    "title": "Project",
-    "section": "Team Meetings",
-    "text": "Team Meetings\nTeam meetings will be weekly and in-person. The team will determine when all members can meet at the same time each week to discuss their weekly accomplishments, upcoming goals, setbacks, etc. The PM will share with me the time and the location of the meeting.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#deliverables",
-    "href": "project/index.html#deliverables",
-    "title": "Project",
-    "section": "Deliverables",
-    "text": "Deliverables\n\nMidterm Presentation\nFinal Presentation\nFinal R Markdown Report and pdf\nWork logs/GitHub commits",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#project-evaluation",
-    "href": "project/index.html#project-evaluation",
-    "title": "Project",
-    "section": "Project Evaluation",
-    "text": "Project Evaluation\nThe project has different components representing it at various stages (e.g., midterm presentation, final presentation and report). See those sections specifically but the following general items will be important to consider.\n\nQuality of project deliverable documents (e.g., organization, coherence, story, coding clarity/organization, plots, etc.)\nProfessionalism (e.g., liaison meeting etiquette and responsibility, timely discord communication, non-tardy attendance at weekly team meeting, weekly work logs, feedback from liaison, etc.)\nPeer evaluation (e.g., contributions, team player, etc.)\n\nNote: Liaison’s will also participate in evaluating all teams. The team with the most impressive project (e.g., most clear, most useful and actionable, most interesting, most thought provoking, etc.) will receive bonus points.\n\nPresentation Characteristics\nSee the midterm and final presentation guidelines for more detail and rubric but in general, the following characteristics will be evaluated.\n\nClarity: well-explained; easy to follow/understand; ability to communicate points effectively\nOrganization: structured logically; ability to walk audience through the data journey and communicate a story interpretation about data\nThoroughness: all relevant issues discussed thoroughly\nPresentation Style: degree of preparedness and polish in presentation; smooth and rehearsed; minimum of reading; well-paced; slide quality",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/index.html#weekly-work-logreport",
-    "href": "project/index.html#weekly-work-logreport",
-    "title": "Project",
-    "section": "Weekly Work log/Report",
-    "text": "Weekly Work log/Report\nTracking individual and team goals weekly ensures progress toward the goal, commitment to the project, accountability for oneself, and a record of accomplishments.\n\n\n\nFrequency of Work log\nWork logs are to be completed by end-of-day following the team meeting, after communicating future goals (distributed equally) to other team members. Please make public for me to review. Meetings should be physical to facilitate team cohesion and conversation, and limit silly technical issues that just waste meeting time.\n\n\nContents of Work log\nWork logs should contain information about the reporting date (or be interactive as needed daily as with a Kanban), the team member reporting, that member’s previous week accomplishments, and that member’s future week goals. A recurring week Kanban spreadsheet would take care of this for each week of the project.\nA Kanban template for projects is located here. You are not required to use this form of work log but some teams have found it useful in the past so I have created one based on the nature of the class project. I have added fields that are relevant to your project so that team members can log work by week. You can certainly modify or add more fields on the Key sheet.\nAnother recommended work log is accessible here. This is a work log file distributed to DS180 Capstone Faculty to share with their teams but I find it a little more clunky than than Kanban.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>"
-    ]
-  },
-  {
-    "objectID": "project/04_project_final.html",
-    "href": "project/04_project_final.html",
-    "title": "Final Presentation",
-    "section": "",
-    "text": "Important\n\n\n\nThis page is under construction to reflect website project. Will be updated.\n\n\n\nOverview\nThe in-class final presentation will be a clear and concise 20-minute presentation version of the final written deliverable. The presentation to your liaison and/or organization may be of greater duration, though I do no not recommend longer than approximately 30 minutes. You should focus on presenting a description of the problem, your approach taken to address the problem, and your visualizations use to tell a story about your findings. Each team member should present and discuss at least one of their visualizations.\nThe final written report for the project will be delivered to me and to your liaison. This report will represent a more careful unpacking of the problem, including a discussion about the data, data cleaning steps, and associated file deliverables. I can print a color-printed copy for you to distribute to the liaison. If the liaison is remote, a color version of the pdf is appropriate.\n\n\nElements to Focus On\nFor the final presentation, you should focus on presenting a description of the problem, data summaries, and visualization used to help tell a story about your findings. You should make sure to address the key elements outlined in the project proposal and discussed with your liaison.\n\n\nPresentation Medium\nYou can use any slide-presentation tool you wish. You will just need to ensure:\n\na printed version of the slide deck for class time;\nan electronic pdf of the slide deck before or after the presentation;\nthat visualizations contain Alt text (alternative text) for screen readers; What is alt text?; see Make your document, presentation and sheets more accessible and How to add alternative text to an object in google slides\n\n\n\nStakeholders\nIdentify the stakeholders for your project. For example, include you liaison, liaison’s institution, course professor, your college, etc. for whom the final work will be submitted.\n\n\nEvaluation and Generalized Rubric\nMore detail will be added here similar to the Midterm Presentation.\n\nQuality of project deliverable documents (e.g., organization, coherence, story, coding clarity/organization, models, plots, etc.)\nProfessionalism (e.g., liaison meeting etiquette and responsibility, timely discord communication, non-tardy attendance at weekly team meeting, weekly worklogs, feedback from liaison, etc.)\nPeer evaluation (e.g., contributions, team player, etc.)\n\nNote: Liaisons will also participate in evaluating teams. The team with the most impressive project (e.g., most clear, most useful and actionable, most interesting, most thought provoking, etc.) will receive bonus points.\n\n\nPresentation Tips\nSee tips for Midterm Presentation.",
+    "text": "Important\n\n\n\nThis page is still being updated for the PSYC167 website project. If you see this message, feel free to ask me for more details about some edits that have not yet been incorporated\n\n\n\n\nOverview\nIn order to complete the project, there are different components that can be easily broken up and delegated among team members. During weekly team meetings, team members can discuss accomplishments and progress, and check off tasks. Provided many of you have never taken on such tasks and thought about how to break tasks into smaller bite-sized pieces, a general framework maybe be helpful for you.\n\n\nLarge-Scale Tasks\nSome tasks have to be performed in a sequential order (e.g., all Git files) but others can be integrated throughout other tasks. For example, describing the motivation of the project, explaining the data and variables used, describing how you prepared the data, presenting findings, etc. are all part of the Report Drafting process. Components can be, and should be, worked on in piecemeal so that they are all not delayed until the end.\n\nDetermine a public data set (some fun suggestions provided) to use for telling a story with data\nReview and understand the structure of the data and identify a story/theme and relevant variables\nOutline the project plan and develop a timeline (consider how timeline maps onto course topics)\nRead data, clean and prepare raw data or data for any summaries\nCreate visualization scripts for plots (or tables if you really need them, though not covered in the course)\nAdd, commit, and push your project contributions regularly\nMerge/integrate collaborator contribution files (e.g., into your branch, into test branch)\nBuild/render website regularly\nFinalize website build",
     "crumbs": [
       "**Schedule**",
       "<b>Project</b>",
-      "**Final Presentation**"
+      "**Project Tasks**"
+    ]
+  },
+  {
+    "objectID": "project/02_project_team_roles.html",
+    "href": "project/02_project_team_roles.html",
+    "title": "Team membership and roles",
+    "section": "",
+    "text": "Important\n\n\n\nThis page is under construction to reflect website project. Will be updated.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Project</b>",
+      "**Team membership and roles**"
+    ]
+  },
+  {
+    "objectID": "project/02_project_team_roles.html#team-roles",
+    "href": "project/02_project_team_roles.html#team-roles",
+    "title": "Team membership and roles",
+    "section": "Team Roles",
+    "text": "Team Roles\nProject roles help streamline events, assist delegation, allow for some accountability, and reduce workload overlap. Project roles are designed to help keep the project organized and reduce confusion about what project elements team members are taking on. Team roles should be decided upon in a way that maximizes member ability so that task demands are equal across team members. These roles provide some guidelines but do not obviate members from contributing to and participating in other tasks subsumed under specific roles. In other words, when the Project Manager falls ill, another team member should step up to facilitate any necessary communication to me. Likewise, the Coding Lead would step in to help the Writing Lead revise writing when necessary. Similarly, the Writing Lead or Project Manager should help the Coding Lead with organizing code when appropriate. All team members have have the same goal, which is to develop code, commit code on GitHub weekly, and communicate the project to me any audience. Thus, all team members will write code, organize content, and write website content. Each member may take lead on sections with which they are most familiar or most qualified in addressing to be determined by the team.\nIf the team decides to create roles different from those suggested below, please just let me know.\nSuggested Roles:\n\n1. Project Manager (PM): The project manager helps with organization of the project and is the point person for communication.\n\nCommunicating the team meeting time and location to me;\nCommunicating with course faculty (and any liaison(s));\nScheduling and reminding the team meetings (and meetings with any liaisons);\nAssigning tasks to team members (with help from course professor is needed) and based on the project requirements;\nMonitoring and keeping track of each member’s project progress;\nMotivating the team members on their task completion and future goals;\nDealing with any conflicts within the team and updating any concerns with course professor;\nCoordinating team activities such as presentation dry runs;\nHelping maintain equity of tasks across all team members, inclusion the PM;\nThe Project Manager is not responsible to reminding team members to complete their tasks or complete worklogs.\n\n\n\n2. Reporting Lead (RL): The reporting lead(s) helps with organization of the reporting documents (e.g., slides, report) and revision of writing.\n\n1 or 2 members\nPlanning, guiding, and leading report writing;\nDoing background/external research on topic as relevant;\nAssigning sections/chapters of documents to appropriate members;\nKeeping track of the written progress;\nHelping develop a data story line;\nFormatting, text, images, inline code (R code embedded in text if relevant), and tables on final document (RMarkdown for final report);\nProofreading/editing deliverable documents like slide presentation, written report, etc.;\nThe Reporting Team is not responsible to all writing.\n\n\n\n3. Coding Lead (CL): The coding lead(s) helps with organization and management of the project code elements (e.g., project, code, associated files, GitHub repo (recommended)).\n\n1 or 2 members\nCreating and maintaining organization of the project code (e.g., directories, sourced scripts, etc.)\nLeading coding and code documenting;\nAssigning technical tasks to other team members;\nKeeping track of the progress of the technical tasks;\nHelping other team members troubleshoot code (see also TA and course professor);\nCommunicating with PM and course professor regarding any technical needs and concerns;\nCommunicating with RL regarding messaging of coded results;\nMaintaining GitHub repo (making sure teammates are pushing work to remote repo);\nThe Coding Team is not responsible for all coding.\n\nBased on abilities and interests of team members, the team should determine how many individuals to assign to a given role, or determine other appropriate roles given the abilities of the team members. There should be unanimity in these decisions. I will not assign you to roles.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Project</b>",
+      "**Team membership and roles**"
+    ]
+  },
+  {
+    "objectID": "modules_setup/index.html",
+    "href": "modules_setup/index.html",
+    "title": "Installation, Setup, & R Basics",
+    "section": "",
+    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio. All instructions will assume you are using RStudio. For report documents, we will use the R Markdown language. RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/index.html#overview",
+    "href": "modules_setup/index.html#overview",
+    "title": "Installation, Setup, & R Basics",
+    "section": "",
+    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio. All instructions will assume you are using RStudio. For report documents, we will use the R Markdown language. RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/index.html#setup-structure",
+    "href": "modules_setup/index.html#setup-structure",
+    "title": "Installation, Setup, & R Basics",
+    "section": "Setup Structure",
+    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account if you do not have one\nInstall Git if your computer system needs it (e.g., not installed)",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/index.html#other-setup-topics",
+    "href": "modules_setup/index.html#other-setup-topics",
+    "title": "Installation, Setup, & R Basics",
+    "section": "Other Setup Topics",
+    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts are in this section.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/Installation & Setup/index.html",
+    "href": "modules_setup/Installation & Setup/index.html",
+    "title": "Installation & Setup",
+    "section": "",
+    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio as all instructions for the course will be in RStudio. For report documents, we will use the R Markdown language, which integrates easily with RStudio. Moreover, RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>Installation & Setup</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/Installation & Setup/index.html#overview",
+    "href": "modules_setup/Installation & Setup/index.html#overview",
+    "title": "Installation & Setup",
+    "section": "",
+    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio as all instructions for the course will be in RStudio. For report documents, we will use the R Markdown language, which integrates easily with RStudio. Moreover, RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>Installation & Setup</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/Installation & Setup/index.html#setup-structure",
+    "href": "modules_setup/Installation & Setup/index.html#setup-structure",
+    "title": "Installation & Setup",
+    "section": "Setup Structure",
+    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account (if you do not have one)\nInstall Git if your computer system needs it (it’s not already installed)",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>Installation & Setup</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/Installation & Setup/index.html#other-setup-topics",
+    "href": "modules_setup/Installation & Setup/index.html#other-setup-topics",
+    "title": "Installation & Setup",
+    "section": "Other Setup Topics",
+    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts can be found in this topic section.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>Installation & Setup</b>"
+    ]
+  },
+  {
+    "objectID": "modules/index.html",
+    "href": "modules/index.html",
+    "title": "Modules",
+    "section": "",
+    "text": "This course consists of various content modules that introduce students to data visualization techniques using R. Techniques, however, should not be applied haphazardly but instead with respect to the biological and cognitive limitations of the user. The general principles of data visualization taught can be applied to programming languages other than R (e.g., Python, D3, etc.).",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Modules</b>"
+    ]
+  },
+  {
+    "objectID": "modules/index.html#module-structure",
+    "href": "modules/index.html#module-structure",
+    "title": "Modules",
+    "section": "Module structure",
+    "text": "Module structure\nIn general, modules will contain readings, additional resources, and weekly assignments.\nThe modules will be updated across the semester as needed. There are more modules on this course site because some modules provide other useful information. The names of the modules listed in the syllabus, however, do match the names in the module listing.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Modules</b>"
+    ]
+  },
+  {
+    "objectID": "exercises/coordinates-axes-and-scales-exercise.html",
+    "href": "exercises/coordinates-axes-and-scales-exercise.html",
+    "title": "Scales Exercise",
+    "section": "",
+    "text": "In this exercise, you will create several plots using ggplot2 and modify axis labels and breaks using the scales library. Use the provided data set to complete the tasks.\n\n\n```{r}\n# Create a data frame with proportions, revenue, and time variables\nset.seed(123)\ndata &lt;- data.frame(\n  Category = rep(c(\"A\", \"B\", \"C\", \"D\"), each = 5),\n  Proportion = runif(20, 0.01, 1),\n  Revenue = round(runif(20, 1000, 50000), 2),\n  Time = rep(2015:2019, 4)\n)\n\n# Display the data\nprint(data)\n```\n\n\n\nCreate a bar plot showing the proportion of each Category in the data for a specific year. Format the y-axis to display the proportions as percentages using the scales::percent function.\n```{r}\nggplot(data, aes(x = Category, y = Proportion, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(labels = scales::percent) +  # Modify labels to show percentages\n  labs(title = \"Proportions by Category\", y = \"Proportion\", x = \"Category\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Revenue over Time for each Category. Format the y-axis to display revenue values as dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, color = Category)) +\n  geom_point(size = 3) +\n  scale_y_continuous(labels = scales::dollar) +  # Format y-axis as dollars\n  labs(title = \"Revenue Over Time by Category\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a line plot of Revenue over Time for each Category. Limit the x-axis to display only the years 2016, 2018, and 2019 using the breaks parameter.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, group = Category, color = Category)) +\n  geom_line() +\n  scale_x_continuous(breaks = c(2016, 2018, 2019)) +  # Custom breaks for x-axis\n  labs(title = \"Revenue Over Selected Years\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Proportion over Time for each Category. Customize the labels of the x-axis to display “Yr-2015”, “Yr-2016”, etc., using the labels parameter with a custom function.\n```{r}\nggplot(data, aes(x = Time, y = Proportion, color = Category)) +\n  geom_point(size = 3) +\n  scale_x_continuous(labels = function(x) paste(\"Yr-\", x, sep = \"\")) +  # Custom labels\n  scale_y_continuous(labels = scales::percent) +  # Percent format for y-axis\n  labs(title = \"Proportion Over Time\", y = \"Proportion\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a bar plot of total Revenue for each Category across all years. Apply a log transformation to the y-axis and format it to display the transformed values in dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Category, y = Revenue, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(trans = \"log10\", labels = scales::dollar) +  # Log transformation + dollar format\n  labs(title = \"Log-Transformed Revenue by Category\", y = \"Log Revenue ($)\", x = \"Category\") +\n  theme_minimal()\n```"
+  },
+  {
+    "objectID": "exercises/coordinates-axes-and-scales-exercise.html#exercise-instructions",
+    "href": "exercises/coordinates-axes-and-scales-exercise.html#exercise-instructions",
+    "title": "Scales Exercise",
+    "section": "",
+    "text": "In this exercise, you will create several plots using ggplot2 and modify axis labels and breaks using the scales library. Use the provided data set to complete the tasks.\n\n\n```{r}\n# Create a data frame with proportions, revenue, and time variables\nset.seed(123)\ndata &lt;- data.frame(\n  Category = rep(c(\"A\", \"B\", \"C\", \"D\"), each = 5),\n  Proportion = runif(20, 0.01, 1),\n  Revenue = round(runif(20, 1000, 50000), 2),\n  Time = rep(2015:2019, 4)\n)\n\n# Display the data\nprint(data)\n```\n\n\n\nCreate a bar plot showing the proportion of each Category in the data for a specific year. Format the y-axis to display the proportions as percentages using the scales::percent function.\n```{r}\nggplot(data, aes(x = Category, y = Proportion, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(labels = scales::percent) +  # Modify labels to show percentages\n  labs(title = \"Proportions by Category\", y = \"Proportion\", x = \"Category\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Revenue over Time for each Category. Format the y-axis to display revenue values as dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, color = Category)) +\n  geom_point(size = 3) +\n  scale_y_continuous(labels = scales::dollar) +  # Format y-axis as dollars\n  labs(title = \"Revenue Over Time by Category\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a line plot of Revenue over Time for each Category. Limit the x-axis to display only the years 2016, 2018, and 2019 using the breaks parameter.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, group = Category, color = Category)) +\n  geom_line() +\n  scale_x_continuous(breaks = c(2016, 2018, 2019)) +  # Custom breaks for x-axis\n  labs(title = \"Revenue Over Selected Years\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Proportion over Time for each Category. Customize the labels of the x-axis to display “Yr-2015”, “Yr-2016”, etc., using the labels parameter with a custom function.\n```{r}\nggplot(data, aes(x = Time, y = Proportion, color = Category)) +\n  geom_point(size = 3) +\n  scale_x_continuous(labels = function(x) paste(\"Yr-\", x, sep = \"\")) +  # Custom labels\n  scale_y_continuous(labels = scales::percent) +  # Percent format for y-axis\n  labs(title = \"Proportion Over Time\", y = \"Proportion\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a bar plot of total Revenue for each Category across all years. Apply a log transformation to the y-axis and format it to display the transformed values in dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Category, y = Revenue, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(trans = \"log10\", labels = scales::dollar) +  # Log transformation + dollar format\n  labs(title = \"Log-Transformed Revenue by Category\", y = \"Log Revenue ($)\", x = \"Category\") +\n  theme_minimal()\n```"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Nothing to see here"
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html",
+    "href": "exercises/project-management-exercise.html",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "This exercise walks through a safe Git workflow for a team of 4 students. Each student contributes a different type of file:\n\nStudent 1: Data file (data/raw/data.csv)\nStudent 2: Data cleaning script (src/data/clean_data.R)\nStudent 3: Plot script (src/figs/make_plot.R)\nStudent 4: Quarto webpage (pages/report.qmd) referencing a saved PNG figure (figs/plot.png)\n\nThe focus is on fetching before merging to avoid conflicts and working safely without overwriting.\n\n\n\nEach student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project\n\n\n\n\nEach student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4\n\n\n\n\n\n\n# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\"\n\n\n\n\n\nBefore pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging.\n\n\n\n\nThe instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report.\n\n\n\n\n\nWork in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch.\n\n\n\n\n\nAfter merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined."
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#step-1-clone-the-repository",
+    "href": "exercises/project-management-exercise.html#step-1-clone-the-repository",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "Each student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project"
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#step-2-create-or-switch-to-a-branch",
+    "href": "exercises/project-management-exercise.html#step-2-create-or-switch-to-a-branch",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "Each student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4"
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#step-3-add-work-in-the-correct-folder",
+    "href": "exercises/project-management-exercise.html#step-3-add-work-in-the-correct-folder",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\""
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#step-4-sync-safely-with-remote-repository",
+    "href": "exercises/project-management-exercise.html#step-4-sync-safely-with-remote-repository",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "Before pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging."
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#step-5-merging-into-main-instructor-or-team-lead",
+    "href": "exercises/project-management-exercise.html#step-5-merging-into-main-instructor-or-team-lead",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "The instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report."
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#summary-of-safe-practices",
+    "href": "exercises/project-management-exercise.html#summary-of-safe-practices",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "Work in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch."
+  },
+  {
+    "objectID": "exercises/project-management-exercise.html#next-steps",
+    "href": "exercises/project-management-exercise.html#next-steps",
+    "title": "Git Team Exercise: Safe Collaboration",
+    "section": "",
+    "text": "After merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined."
+  },
+  {
+    "objectID": "modules_setup/R Basics/index.html",
+    "href": "modules_setup/R Basics/index.html",
+    "title": "R Basics and Refreshers",
+    "section": "",
+    "text": "For this course, we use the R programming language. Although you may have a preferred IDE, my recommendation is to use RStudio. All instructions will assume you are using RStudio. We will also use the R Markdown language for report documents. Projects will be managed at GitHub and will interface with RStudio using the Git program.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>R Basics and Refreshers</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/R Basics/index.html#setup-structure",
+    "href": "modules_setup/R Basics/index.html#setup-structure",
+    "title": "R Basics and Refreshers",
+    "section": "Setup Structure",
+    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account if you do not have one\nInstall Git if your computer system needs it (e.g., not installed)",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>R Basics and Refreshers</b>"
+    ]
+  },
+  {
+    "objectID": "modules_setup/R Basics/index.html#other-setup-topics",
+    "href": "modules_setup/R Basics/index.html#other-setup-topics",
+    "title": "R Basics and Refreshers",
+    "section": "Other Setup Topics",
+    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts are in this section.",
+    "crumbs": [
+      "**Schedule**",
+      "<b>Installation, Setup, & R Basics</b>",
+      "<b>R Basics and Refreshers</b>"
     ]
   },
   {
@@ -3276,362 +3450,92 @@
     ]
   },
   {
-    "objectID": "modules_setup/R Basics/index.html",
-    "href": "modules_setup/R Basics/index.html",
-    "title": "R Basics and Refreshers",
+    "objectID": "project/04_project_final.html",
+    "href": "project/04_project_final.html",
+    "title": "Final Presentation",
     "section": "",
-    "text": "For this course, we use the R programming language. Although you may have a preferred IDE, my recommendation is to use RStudio. All instructions will assume you are using RStudio. We will also use the R Markdown language for report documents. Projects will be managed at GitHub and will interface with RStudio using the Git program.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>R Basics and Refreshers</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/R Basics/index.html#setup-structure",
-    "href": "modules_setup/R Basics/index.html#setup-structure",
-    "title": "R Basics and Refreshers",
-    "section": "Setup Structure",
-    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account if you do not have one\nInstall Git if your computer system needs it (e.g., not installed)",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>R Basics and Refreshers</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/R Basics/index.html#other-setup-topics",
-    "href": "modules_setup/R Basics/index.html#other-setup-topics",
-    "title": "R Basics and Refreshers",
-    "section": "Other Setup Topics",
-    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts are in this section.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>R Basics and Refreshers</b>"
-    ]
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html",
-    "href": "exercises/project-management-exercise.html",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "This exercise walks through a safe Git workflow for a team of 4 students. Each student contributes a different type of file:\n\nStudent 1: Data file (data/raw/data.csv)\nStudent 2: Data cleaning script (src/data/clean_data.R)\nStudent 3: Plot script (src/figs/make_plot.R)\nStudent 4: Quarto webpage (pages/report.qmd) referencing a saved PNG figure (figs/plot.png)\n\nThe focus is on fetching before merging to avoid conflicts and working safely without overwriting.\n\n\n\nEach student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project\n\n\n\n\nEach student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4\n\n\n\n\n\n\n# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\"\n\n\n\n\n\nBefore pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging.\n\n\n\n\nThe instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report.\n\n\n\n\n\nWork in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch.\n\n\n\n\n\nAfter merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined."
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#step-1-clone-the-repository",
-    "href": "exercises/project-management-exercise.html#step-1-clone-the-repository",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Each student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project"
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#step-2-create-or-switch-to-a-branch",
-    "href": "exercises/project-management-exercise.html#step-2-create-or-switch-to-a-branch",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Each student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4"
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#step-3-add-work-in-the-correct-folder",
-    "href": "exercises/project-management-exercise.html#step-3-add-work-in-the-correct-folder",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\""
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#step-4-sync-safely-with-remote-repository",
-    "href": "exercises/project-management-exercise.html#step-4-sync-safely-with-remote-repository",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Before pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging."
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#step-5-merging-into-main-instructor-or-team-lead",
-    "href": "exercises/project-management-exercise.html#step-5-merging-into-main-instructor-or-team-lead",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "The instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report."
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#summary-of-safe-practices",
-    "href": "exercises/project-management-exercise.html#summary-of-safe-practices",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Work in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch."
-  },
-  {
-    "objectID": "exercises/project-management-exercise.html#next-steps",
-    "href": "exercises/project-management-exercise.html#next-steps",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "After merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Nothing to see here"
-  },
-  {
-    "objectID": "exercises/coordinates-axes-and-scales-exercise.html",
-    "href": "exercises/coordinates-axes-and-scales-exercise.html",
-    "title": "Scales Exercise",
-    "section": "",
-    "text": "In this exercise, you will create several plots using ggplot2 and modify axis labels and breaks using the scales library. Use the provided data set to complete the tasks.\n\n\n```{r}\n# Create a data frame with proportions, revenue, and time variables\nset.seed(123)\ndata &lt;- data.frame(\n  Category = rep(c(\"A\", \"B\", \"C\", \"D\"), each = 5),\n  Proportion = runif(20, 0.01, 1),\n  Revenue = round(runif(20, 1000, 50000), 2),\n  Time = rep(2015:2019, 4)\n)\n\n# Display the data\nprint(data)\n```\n\n\n\nCreate a bar plot showing the proportion of each Category in the data for a specific year. Format the y-axis to display the proportions as percentages using the scales::percent function.\n```{r}\nggplot(data, aes(x = Category, y = Proportion, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(labels = scales::percent) +  # Modify labels to show percentages\n  labs(title = \"Proportions by Category\", y = \"Proportion\", x = \"Category\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Revenue over Time for each Category. Format the y-axis to display revenue values as dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, color = Category)) +\n  geom_point(size = 3) +\n  scale_y_continuous(labels = scales::dollar) +  # Format y-axis as dollars\n  labs(title = \"Revenue Over Time by Category\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a line plot of Revenue over Time for each Category. Limit the x-axis to display only the years 2016, 2018, and 2019 using the breaks parameter.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, group = Category, color = Category)) +\n  geom_line() +\n  scale_x_continuous(breaks = c(2016, 2018, 2019)) +  # Custom breaks for x-axis\n  labs(title = \"Revenue Over Selected Years\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Proportion over Time for each Category. Customize the labels of the x-axis to display “Yr-2015”, “Yr-2016”, etc., using the labels parameter with a custom function.\n```{r}\nggplot(data, aes(x = Time, y = Proportion, color = Category)) +\n  geom_point(size = 3) +\n  scale_x_continuous(labels = function(x) paste(\"Yr-\", x, sep = \"\")) +  # Custom labels\n  scale_y_continuous(labels = scales::percent) +  # Percent format for y-axis\n  labs(title = \"Proportion Over Time\", y = \"Proportion\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a bar plot of total Revenue for each Category across all years. Apply a log transformation to the y-axis and format it to display the transformed values in dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Category, y = Revenue, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(trans = \"log10\", labels = scales::dollar) +  # Log transformation + dollar format\n  labs(title = \"Log-Transformed Revenue by Category\", y = \"Log Revenue ($)\", x = \"Category\") +\n  theme_minimal()\n```"
-  },
-  {
-    "objectID": "exercises/coordinates-axes-and-scales-exercise.html#exercise-instructions",
-    "href": "exercises/coordinates-axes-and-scales-exercise.html#exercise-instructions",
-    "title": "Scales Exercise",
-    "section": "",
-    "text": "In this exercise, you will create several plots using ggplot2 and modify axis labels and breaks using the scales library. Use the provided data set to complete the tasks.\n\n\n```{r}\n# Create a data frame with proportions, revenue, and time variables\nset.seed(123)\ndata &lt;- data.frame(\n  Category = rep(c(\"A\", \"B\", \"C\", \"D\"), each = 5),\n  Proportion = runif(20, 0.01, 1),\n  Revenue = round(runif(20, 1000, 50000), 2),\n  Time = rep(2015:2019, 4)\n)\n\n# Display the data\nprint(data)\n```\n\n\n\nCreate a bar plot showing the proportion of each Category in the data for a specific year. Format the y-axis to display the proportions as percentages using the scales::percent function.\n```{r}\nggplot(data, aes(x = Category, y = Proportion, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(labels = scales::percent) +  # Modify labels to show percentages\n  labs(title = \"Proportions by Category\", y = \"Proportion\", x = \"Category\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Revenue over Time for each Category. Format the y-axis to display revenue values as dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, color = Category)) +\n  geom_point(size = 3) +\n  scale_y_continuous(labels = scales::dollar) +  # Format y-axis as dollars\n  labs(title = \"Revenue Over Time by Category\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a line plot of Revenue over Time for each Category. Limit the x-axis to display only the years 2016, 2018, and 2019 using the breaks parameter.\n```{r}\nggplot(data, aes(x = Time, y = Revenue, group = Category, color = Category)) +\n  geom_line() +\n  scale_x_continuous(breaks = c(2016, 2018, 2019)) +  # Custom breaks for x-axis\n  labs(title = \"Revenue Over Selected Years\", y = \"Revenue ($)\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a point plot showing Proportion over Time for each Category. Customize the labels of the x-axis to display “Yr-2015”, “Yr-2016”, etc., using the labels parameter with a custom function.\n```{r}\nggplot(data, aes(x = Time, y = Proportion, color = Category)) +\n  geom_point(size = 3) +\n  scale_x_continuous(labels = function(x) paste(\"Yr-\", x, sep = \"\")) +  # Custom labels\n  scale_y_continuous(labels = scales::percent) +  # Percent format for y-axis\n  labs(title = \"Proportion Over Time\", y = \"Proportion\", x = \"Year\") +\n  theme_minimal()\n```\n\n\n\nCreate a bar plot of total Revenue for each Category across all years. Apply a log transformation to the y-axis and format it to display the transformed values in dollars using the scales::dollar function.\n```{r}\nggplot(data, aes(x = Category, y = Revenue, fill = Category)) +\n  geom_bar(stat = \"identity\") +\n  scale_y_continuous(trans = \"log10\", labels = scales::dollar) +  # Log transformation + dollar format\n  labs(title = \"Log-Transformed Revenue by Category\", y = \"Log Revenue ($)\", x = \"Category\") +\n  theme_minimal()\n```"
-  },
-  {
-    "objectID": "modules/index.html",
-    "href": "modules/index.html",
-    "title": "Modules",
-    "section": "",
-    "text": "This course consists of various content modules that introduce students to data visualization techniques using R. Techniques, however, should not be applied haphazardly but instead with respect to the biological and cognitive limitations of the user. The general principles of data visualization taught can be applied to programming languages other than R (e.g., Python, D3, etc.).",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Modules</b>"
-    ]
-  },
-  {
-    "objectID": "modules/index.html#module-structure",
-    "href": "modules/index.html#module-structure",
-    "title": "Modules",
-    "section": "Module structure",
-    "text": "Module structure\nIn general, modules will contain readings, additional resources, and weekly assignments.\nThe modules will be updated across the semester as needed. There are more modules on this course site because some modules provide other useful information. The names of the modules listed in the syllabus, however, do match the names in the module listing.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Modules</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/Installation & Setup/index.html",
-    "href": "modules_setup/Installation & Setup/index.html",
-    "title": "Installation & Setup",
-    "section": "",
-    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio as all instructions for the course will be in RStudio. For report documents, we will use the R Markdown language, which integrates easily with RStudio. Moreover, RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>Installation & Setup</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/Installation & Setup/index.html#overview",
-    "href": "modules_setup/Installation & Setup/index.html#overview",
-    "title": "Installation & Setup",
-    "section": "",
-    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio as all instructions for the course will be in RStudio. For report documents, we will use the R Markdown language, which integrates easily with RStudio. Moreover, RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>Installation & Setup</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/Installation & Setup/index.html#setup-structure",
-    "href": "modules_setup/Installation & Setup/index.html#setup-structure",
-    "title": "Installation & Setup",
-    "section": "Setup Structure",
-    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account (if you do not have one)\nInstall Git if your computer system needs it (it’s not already installed)",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>Installation & Setup</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/Installation & Setup/index.html#other-setup-topics",
-    "href": "modules_setup/Installation & Setup/index.html#other-setup-topics",
-    "title": "Installation & Setup",
-    "section": "Other Setup Topics",
-    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts can be found in this topic section.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>",
-      "<b>Installation & Setup</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/index.html",
-    "href": "modules_setup/index.html",
-    "title": "Installation, Setup, & R Basics",
-    "section": "",
-    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio. All instructions will assume you are using RStudio. For report documents, we will use the R Markdown language. RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/index.html#overview",
-    "href": "modules_setup/index.html#overview",
-    "title": "Installation, Setup, & R Basics",
-    "section": "",
-    "text": "For this course, we will use the R programming language to create all data visualizations. Although you may have a preferred IDE other than RStudio, my recommendation is to use RStudio. All instructions will assume you are using RStudio. For report documents, we will use the R Markdown language. RStudio projects will be used for managing your work space in order to simplify your working directory and file paths, manage history, and your R Markdown files (e.g., .Rmd) and code script files (.R). These RStudio projects will be version-control projects maintained at a remote repository on GitHub.com. Finally, the Git program will be used to communicate with that remote repository.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/index.html#setup-structure",
-    "href": "modules_setup/index.html#setup-structure",
-    "title": "Installation, Setup, & R Basics",
-    "section": "Setup Structure",
-    "text": "Setup Structure\n\nInstall R and RStudio\nCreate a GitHub account if you do not have one\nInstall Git if your computer system needs it (e.g., not installed)",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>"
-    ]
-  },
-  {
-    "objectID": "modules_setup/index.html#other-setup-topics",
-    "href": "modules_setup/index.html#other-setup-topics",
-    "title": "Installation, Setup, & R Basics",
-    "section": "Other Setup Topics",
-    "text": "Other Setup Topics\nFor those requiring refreshers about R Markdown, functions, and scripts are in this section.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Installation, Setup, & R Basics</b>"
-    ]
-  },
-  {
-    "objectID": "project/02_project_team_roles.html",
-    "href": "project/02_project_team_roles.html",
-    "title": "Team membership and roles",
-    "section": "",
-    "text": "Important\n\n\n\nThis page is under construction to reflect website project. Will be updated.",
+    "text": "Important\n\n\n\nThis page is under construction to reflect website project. Will be updated.\n\n\n\nOverview\nThe in-class final presentation will be a clear and concise 20-minute presentation version of the final written deliverable. The presentation to your liaison and/or organization may be of greater duration, though I do no not recommend longer than approximately 30 minutes. You should focus on presenting a description of the problem, your approach taken to address the problem, and your visualizations use to tell a story about your findings. Each team member should present and discuss at least one of their visualizations.\nThe final written report for the project will be delivered to me and to your liaison. This report will represent a more careful unpacking of the problem, including a discussion about the data, data cleaning steps, and associated file deliverables. I can print a color-printed copy for you to distribute to the liaison. If the liaison is remote, a color version of the pdf is appropriate.\n\n\nElements to Focus On\nFor the final presentation, you should focus on presenting a description of the problem, data summaries, and visualization used to help tell a story about your findings. You should make sure to address the key elements outlined in the project proposal and discussed with your liaison.\n\n\nPresentation Medium\nYou can use any slide-presentation tool you wish. You will just need to ensure:\n\na printed version of the slide deck for class time;\nan electronic pdf of the slide deck before or after the presentation;\nthat visualizations contain Alt text (alternative text) for screen readers; What is alt text?; see Make your document, presentation and sheets more accessible and How to add alternative text to an object in google slides\n\n\n\nStakeholders\nIdentify the stakeholders for your project. For example, include you liaison, liaison’s institution, course professor, your college, etc. for whom the final work will be submitted.\n\n\nEvaluation and Generalized Rubric\nMore detail will be added here similar to the Midterm Presentation.\n\nQuality of project deliverable documents (e.g., organization, coherence, story, coding clarity/organization, models, plots, etc.)\nProfessionalism (e.g., liaison meeting etiquette and responsibility, timely discord communication, non-tardy attendance at weekly team meeting, weekly worklogs, feedback from liaison, etc.)\nPeer evaluation (e.g., contributions, team player, etc.)\n\nNote: Liaisons will also participate in evaluating teams. The team with the most impressive project (e.g., most clear, most useful and actionable, most interesting, most thought provoking, etc.) will receive bonus points.\n\n\nPresentation Tips\nSee tips for Midterm Presentation.",
     "crumbs": [
       "**Schedule**",
       "<b>Project</b>",
-      "**Team membership and roles**"
+      "**Final Presentation**"
     ]
   },
   {
-    "objectID": "project/02_project_team_roles.html#team-roles",
-    "href": "project/02_project_team_roles.html#team-roles",
-    "title": "Team membership and roles",
-    "section": "Team Roles",
-    "text": "Team Roles\nProject roles help streamline events, assist delegation, allow for some accountability, and reduce workload overlap. Project roles are designed to help keep the project organized and reduce confusion about what project elements team members are taking on. Team roles should be decided upon in a way that maximizes member ability so that task demands are equal across team members. These roles provide some guidelines but do not obviate members from contributing to and participating in other tasks subsumed under specific roles. In other words, when the Project Manager falls ill, another team member should step up to facilitate any necessary communication to me. Likewise, the Coding Lead would step in to help the Writing Lead revise writing when necessary. Similarly, the Writing Lead or Project Manager should help the Coding Lead with organizing code when appropriate. All team members have have the same goal, which is to develop code, commit code on GitHub weekly, and communicate the project to me any audience. Thus, all team members will write code, organize content, and write website content. Each member may take lead on sections with which they are most familiar or most qualified in addressing to be determined by the team.\nIf the team decides to create roles different from those suggested below, please just let me know.\nSuggested Roles:\n\n1. Project Manager (PM): The project manager helps with organization of the project and is the point person for communication.\n\nCommunicating the team meeting time and location to me;\nCommunicating with course faculty (and any liaison(s));\nScheduling and reminding the team meetings (and meetings with any liaisons);\nAssigning tasks to team members (with help from course professor is needed) and based on the project requirements;\nMonitoring and keeping track of each member’s project progress;\nMotivating the team members on their task completion and future goals;\nDealing with any conflicts within the team and updating any concerns with course professor;\nCoordinating team activities such as presentation dry runs;\nHelping maintain equity of tasks across all team members, inclusion the PM;\nThe Project Manager is not responsible to reminding team members to complete their tasks or complete worklogs.\n\n\n\n2. Reporting Lead (RL): The reporting lead(s) helps with organization of the reporting documents (e.g., slides, report) and revision of writing.\n\n1 or 2 members\nPlanning, guiding, and leading report writing;\nDoing background/external research on topic as relevant;\nAssigning sections/chapters of documents to appropriate members;\nKeeping track of the written progress;\nHelping develop a data story line;\nFormatting, text, images, inline code (R code embedded in text if relevant), and tables on final document (RMarkdown for final report);\nProofreading/editing deliverable documents like slide presentation, written report, etc.;\nThe Reporting Team is not responsible to all writing.\n\n\n\n3. Coding Lead (CL): The coding lead(s) helps with organization and management of the project code elements (e.g., project, code, associated files, GitHub repo (recommended)).\n\n1 or 2 members\nCreating and maintaining organization of the project code (e.g., directories, sourced scripts, etc.)\nLeading coding and code documenting;\nAssigning technical tasks to other team members;\nKeeping track of the progress of the technical tasks;\nHelping other team members troubleshoot code (see also TA and course professor);\nCommunicating with PM and course professor regarding any technical needs and concerns;\nCommunicating with RL regarding messaging of coded results;\nMaintaining GitHub repo (making sure teammates are pushing work to remote repo);\nThe Coding Team is not responsible for all coding.\n\nBased on abilities and interests of team members, the team should determine how many individuals to assign to a given role, or determine other appropriate roles given the abilities of the team members. There should be unanimity in these decisions. I will not assign you to roles.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>",
-      "**Team membership and roles**"
-    ]
-  },
-  {
-    "objectID": "project/06_project_tasks_webpage.html",
-    "href": "project/06_project_tasks_webpage.html",
-    "title": "Project Tasks",
+    "objectID": "project/index.html",
+    "href": "project/index.html",
+    "title": "Project",
     "section": "",
-    "text": "Important\n\n\n\nThis page is still being updated for the PSYC167 website project. If you see this message, feel free to ask me for more details about some edits that have not yet been incorporated\n\n\n\n\nOverview\nIn order to complete the project, there are different components that can be easily broken up and delegated among team members. During weekly team meetings, team members can discuss accomplishments and progress, and check off tasks. Provided many of you have never taken on such tasks and thought about how to break tasks into smaller bite-sized pieces, a general framework maybe be helpful for you.\n\n\nLarge-Scale Tasks\nSome tasks have to be performed in a sequential order (e.g., all Git files) but others can be integrated throughout other tasks. For example, describing the motivation of the project, explaining the data and variables used, describing how you prepared the data, presenting findings, etc. are all part of the Report Drafting process. Components can be, and should be, worked on in piecemeal so that they are all not delayed until the end.\n\nDetermine a public data set (some fun suggestions provided) to use for telling a story with data\nReview and understand the structure of the data and identify a story/theme and relevant variables\nOutline the project plan and develop a timeline (consider how timeline maps onto course topics)\nRead data, clean and prepare raw data or data for any summaries\nCreate visualization scripts for plots (or tables if you really need them, though not covered in the course)\nAdd, commit, and push your project contributions regularly\nMerge/integrate collaborator contribution files (e.g., into your branch, into test branch)\nBuild/render website regularly\nFinalize website build",
+    "text": "For the project, your team will write code in order to prepare, model, and visualize data in order to communicate a story that would address the question(s) proposed by the participating body (viz., liaison). Each project will differ but there will be similarities across projects, for example, cleaning data, managing variables, creating data summaries, creating visualizations, telling a coherent story, etc.\nEach project has a primary goal which is necessary to include for the final deliverable. If the team can adequately deliver the primary goal, additional goals can be worked on by eager teams. There may be exploratory components, which would allow for a healthy dose of flexibility in team creativity. Exploratory elements, however, should be discussed carefully with project liaisons.\nNOTE: All code will be written in R and all tasks will need to be reproducible. Anything that you do manually without code will not be reproducible.",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "**Project Tasks**"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html",
-    "href": "project/new_07_using_git_with_branches.html",
-    "title": "Git Team Exercise: Safe Collaboration",
+    "objectID": "project/index.html#project-description",
+    "href": "project/index.html#project-description",
+    "title": "Project",
     "section": "",
-    "text": "This exercise walks through a safe Git workflow for a team of 4 students. Each student contributes a different type of file:\n\nStudent 1: Data file (data/raw/data.csv)\nStudent 2: Data cleaning script (src/data/clean_data.R)\nStudent 3: Plot script (src/figs/make_plot.R)\nStudent 4: Quarto webpage (pages/report.qmd) referencing a saved PNG figure (figs/plot.png)\n\nThe focus is on fetching before merging to avoid conflicts and working safely without overwriting.\n\n\n\nEach student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project\n\n\n\n\nEach student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4\n\n\n\n\n\n\n# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\"\n\n\n\n\n\nBefore pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging.\n\n\n\n\nThe instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report.\n\n\n\n\n\nWork in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch.\n\n\n\n\n\nAfter merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined.",
+    "text": "For the project, your team will write code in order to prepare, model, and visualize data in order to communicate a story that would address the question(s) proposed by the participating body (viz., liaison). Each project will differ but there will be similarities across projects, for example, cleaning data, managing variables, creating data summaries, creating visualizations, telling a coherent story, etc.\nEach project has a primary goal which is necessary to include for the final deliverable. If the team can adequately deliver the primary goal, additional goals can be worked on by eager teams. There may be exploratory components, which would allow for a healthy dose of flexibility in team creativity. Exploratory elements, however, should be discussed carefully with project liaisons.\nNOTE: All code will be written in R and all tasks will need to be reproducible. Anything that you do manually without code will not be reproducible.",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html#step-1-clone-the-repository",
-    "href": "project/new_07_using_git_with_branches.html#step-1-clone-the-repository",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Each student first clones the repository:\ngit clone https://github.com/example-org/class-project.git\ncd class-project",
+    "objectID": "project/index.html#team-membership-and-roles",
+    "href": "project/index.html#team-membership-and-roles",
+    "title": "Project",
+    "section": "Team Membership and Roles",
+    "text": "Team Membership and Roles\nA team of students will work with a project liaison to develop the project and work together to produce the midterm and final deliverables. Rather than having all students in charge of all duties, team members should consider delegating tasks and various types of workloads to students who are best equipped to handle them either because of ability or because of interest and desire. Teams are to meet weekly and members are to complete individual work log reports, which are used for final grading.",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html#step-2-create-or-switch-to-a-branch",
-    "href": "project/new_07_using_git_with_branches.html#step-2-create-or-switch-to-a-branch",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Each student works on their own branch to avoid overwriting files.\ngit checkout -b student1-data      # Student 1\n# or\ngit checkout -b student2-cleaning   # Student 2\n# or\ngit checkout -b student3-plot       # Student 3\n# or\ngit checkout -b student4-report     # Student 4",
+    "objectID": "project/index.html#team-meetings",
+    "href": "project/index.html#team-meetings",
+    "title": "Project",
+    "section": "Team Meetings",
+    "text": "Team Meetings\nTeam meetings will be weekly and in-person. The team will determine when all members can meet at the same time each week to discuss their weekly accomplishments, upcoming goals, setbacks, etc. The PM will share with me the time and the location of the meeting.",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html#step-3-add-work-in-the-correct-folder",
-    "href": "project/new_07_using_git_with_branches.html#step-3-add-work-in-the-correct-folder",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "# Save your file as data/raw/data.csv\ngit add data/raw/data.csv\ngit commit -m \"Add raw data file\"\n\n\n\n# Save your script as src/data/clean_data.R\ngit add src/data/clean_data.R\ngit commit -m \"Add data cleaning script\"\n\n\n\n# Save your script as src/figs/make_plot.R\n# Make sure it saves a PNG figure in figs/plot.png\ngit add src/figs/make_plot.R figs/plot.png\ngit commit -m \"Add plot script and saved PNG\"\n\n\n\n# Save your report in pages/report.qmd\n# Make sure it references figs/plot.png in the text\ngit add pages/report.qmd\ngit commit -m \"Add report referencing plot\"",
+    "objectID": "project/index.html#deliverables",
+    "href": "project/index.html#deliverables",
+    "title": "Project",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nMidterm Presentation\nFinal Presentation\nFinal R Markdown Report and pdf\nWork logs/GitHub commits",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html#step-4-sync-safely-with-remote-repository",
-    "href": "project/new_07_using_git_with_branches.html#step-4-sync-safely-with-remote-repository",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Before pushing changes, always fetch first to see if others have updated the repo:\ngit fetch origin\n\nIf there are no new changes on the remote branch, you can push safely:\ngit push origin student1-data\nIf there are new changes, merge them into your branch before pushing:\ngit merge origin/main\n\n⚠️ Warning: If you use git pull directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using git fetch first is safer, because you see what’s new before merging.",
+    "objectID": "project/index.html#project-evaluation",
+    "href": "project/index.html#project-evaluation",
+    "title": "Project",
+    "section": "Project Evaluation",
+    "text": "Project Evaluation\nThe project has different components representing it at various stages (e.g., midterm presentation, final presentation and report). See those sections specifically but the following general items will be important to consider.\n\nQuality of project deliverable documents (e.g., organization, coherence, story, coding clarity/organization, plots, etc.)\nProfessionalism (e.g., liaison meeting etiquette and responsibility, timely discord communication, non-tardy attendance at weekly team meeting, weekly work logs, feedback from liaison, etc.)\nPeer evaluation (e.g., contributions, team player, etc.)\n\nNote: Liaison’s will also participate in evaluating all teams. The team with the most impressive project (e.g., most clear, most useful and actionable, most interesting, most thought provoking, etc.) will receive bonus points.\n\nPresentation Characteristics\nSee the midterm and final presentation guidelines for more detail and rubric but in general, the following characteristics will be evaluated.\n\nClarity: well-explained; easy to follow/understand; ability to communicate points effectively\nOrganization: structured logically; ability to walk audience through the data journey and communicate a story interpretation about data\nThoroughness: all relevant issues discussed thoroughly\nPresentation Style: degree of preparedness and polish in presentation; smooth and rehearsed; minimum of reading; well-paced; slide quality",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {
-    "objectID": "project/new_07_using_git_with_branches.html#step-5-merging-into-main-instructor-or-team-lead",
-    "href": "project/new_07_using_git_with_branches.html#step-5-merging-into-main-instructor-or-team-lead",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "The instructor (or team lead) will merge student branches into main one at a time:\ngit checkout main\ngit fetch origin\ngit merge origin/student1-data\nRepeat for student2-cleaning, student3-plot, student4-report.",
+    "objectID": "project/index.html#weekly-work-logreport",
+    "href": "project/index.html#weekly-work-logreport",
+    "title": "Project",
+    "section": "Weekly Work log/Report",
+    "text": "Weekly Work log/Report\nTracking individual and team goals weekly ensures progress toward the goal, commitment to the project, accountability for oneself, and a record of accomplishments.\n\n\n\nFrequency of Work log\nWork logs are to be completed by end-of-day following the team meeting, after communicating future goals (distributed equally) to other team members. Please make public for me to review. Meetings should be physical to facilitate team cohesion and conversation, and limit silly technical issues that just waste meeting time.\n\n\nContents of Work log\nWork logs should contain information about the reporting date (or be interactive as needed daily as with a Kanban), the team member reporting, that member’s previous week accomplishments, and that member’s future week goals. A recurring week Kanban spreadsheet would take care of this for each week of the project.\nA Kanban template for projects is located here. You are not required to use this form of work log but some teams have found it useful in the past so I have created one based on the nature of the class project. I have added fields that are relevant to your project so that team members can log work by week. You can certainly modify or add more fields on the Key sheet.\nAnother recommended work log is accessible here. This is a work log file distributed to DS180 Capstone Faculty to share with their teams but I find it a little more clunky than than Kanban.",
     "crumbs": [
       "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
-    ]
-  },
-  {
-    "objectID": "project/new_07_using_git_with_branches.html#summary-of-safe-practices",
-    "href": "project/new_07_using_git_with_branches.html#summary-of-safe-practices",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "Work in separate branches.\nPlace files in designated folders.\nUse git fetch before merging (safer than pull).\nOnly instructor merges to main.\nAvoid working directly on main branch.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
-    ]
-  },
-  {
-    "objectID": "project/new_07_using_git_with_branches.html#next-steps",
-    "href": "project/new_07_using_git_with_branches.html#next-steps",
-    "title": "Git Team Exercise: Safe Collaboration",
-    "section": "",
-    "text": "After merging, open the webpage:\nquarto render pages/report.qmd\nThis will include the cleaned data, generated figure, and student contributions combined.",
-    "crumbs": [
-      "**Schedule**",
-      "<b>Project</b>",
-      "Git Team Exercise: Safe Collaboration"
+      "<b>Project</b>"
     ]
   },
   {

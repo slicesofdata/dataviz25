@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel I. Cook">
-<meta name="dcterms.date" content="2025-08-26">
+<meta name="dcterms.date" content="2025-09-11">
 
 <title>Project Management 02: R Projects, Git, and GitHub</title>
 <style>
@@ -165,7 +165,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../../homework/hw01.pdf">
  <span class="dropdown-text">HW 01</span></a>
   </li>  
-        <li class="dropdown-header">HW 02</li>
+        <li>
+    <a class="dropdown-item" href="../../homework/hw02.pdf">
+ <span class="dropdown-text">HW 02</span></a>
+  </li>  
         <li class="dropdown-header">HW 03</li>
         <li class="dropdown-header">HW 04</li>
         <li class="dropdown-header">HW 05</li>
@@ -183,8 +186,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
         <li class="dropdown-header">Select Files</li>
         <li>
-    <a class="dropdown-item" href="../../exercises/team-project-git-setup-exercise.pdf">
- <span class="dropdown-text">team-project-git-setup-exercise.pdf</span></a>
+    <a class="dropdown-item" href="../../exercises/team-project-git-exercise.pdf">
+ <span class="dropdown-text">team-project-git-exercise.pdf</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../exercises/2025_grouping_and_summarizing_exercise.pdf">
@@ -619,12 +622,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><strong>Project Tasks</strong></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Git Team Exercise: Safe Collaboration</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -678,7 +675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2025</p>
+      <p class="date">September 11, 2025</p>
     </div>
   </div>
   
@@ -692,6 +689,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview"><strong>Overview</strong></h2>
+<p>The content provided here and in other modules is to help you. I expect you to read it. You certainly don’t have to read it but you will be held accountable for it anyway.</p>
 <p>This module focuses on getting organized. Rather than save files in a haphazard way that will just introduce stress to your life, we will focus on creating order. The best way to create order and stay organized is to <strong>1)</strong> create <em>projects</em> in RStudio, <strong>2)</strong> create directories and sub-directories that leave no ambiguity about where your files are, and <strong>3)</strong> manage all directory paths and file paths simply using the <strong><code>{here}</code></strong> library. Another way is to connect that project with a remote repository saved someplace like GitHub for collaboration. In certain classes (and for your team project), you will use Git to interact with remote repositories connected to Projects in RStudio.</p>
 <p>In order to maintain organization for this class and the project, you will set up a class folder (aka directory) on your computer. You will then create an RStudio project and connect it to a remote private repository on your GitHub account. The reason for its privacy is because of data related to certain exercises.</p>
 <p>You will use this RStudio project for <strong>all class exercises and homework</strong> so that there is no ambiguity about where your files are saved. Finally, you will create directories within your new project directory so that you have an organized directory structure for storing your files. Systems paths for project files and directories will be manage using the <strong><code>{here}</code></strong> library. This process will also ensure that each student’s computer is configured in the same manner.</p>
@@ -734,23 +732,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="creating-a-local-directory-for-class" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-local-directory-for-class"><strong>Creating a Local Directory for Class</strong></h2>
-<p>Create a folder (aka directory) named <code>"dataviz"</code> (yes, all lowercase) on your computer. I recommend creating the directory someplace where you might not accidentally delete it. Create only one so as not to confuse yourself. This will serve as the directory within which you will store content for this course.</p>
+<p>Create a folder (aka directory) named <code>"dataviz"</code> (yes, all lowercase) on your computer. This will serve as the course <strong>uber directory</strong>. The file and directory names I provide you are designed to help you and help me understand your organizational structure for the course and associated projects. After teaching the course several times, some students decide to name the directory something else. Please don’t. If you name your directory something other than instructed and I see it, 5% will come off the top of your final grade. Full stop, no questions asked.</p>
+<p>Where do you create the directory? This depends on your preferred system. I recommend creating it someplace where you might not accidentally delete it. Create only one directory so as not to confuse yourself. <strong>This directory will serve as the directory within which you will store all content for this course.</strong></p>
 </section>
 <section id="connecting-the-repository-to-an-rstudio-project" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-the-repository-to-an-rstudio-project"><strong>Connecting the Repository to an RStudio Project</strong></h2>
-<p>You should already have a repository on GitHub named <em>“dataviz-exercises”</em> which you created from <a href="https://github.com/slicesofdata/start-rstudio-projects">this template repository</a>. You will now create an RStudio project and connect it to that remote repository on your GitHub account.</p>
-<p>When you create the project inside your class directory, your directory structure will look like this:</p>
-<pre><code>dataviz/
-└── dataviz-exercises (project root directory)</code></pre>
+<p>You should already have a repository on GitHub named <em>“dataviz-exercises”</em> which you created from <a href="https://github.com/slicesofdata/start-rstudio-projects">this template repository</a>. You will now create an RStudio project and connect it to that remote repository on your GitHub account. If you named your GitHub repo something else, I will expect you to complete the process again with the correct name.</p>
 <ol class="incremental" type="1">
 <li><p>In RStudio, <strong>File &gt; New Project &gt; Version Control &gt; Git</strong>.</p></li>
-<li><p>In the pop-up, you will see a request for the “repository URL”. Paste the URL of the GitHub repository. This URL will be the same as what you see on your GitHub account. However, we need to add <code>.git</code> to the end of it.</p></li>
+<li><p>In the pop-up window, you will see a request for the “repository URL”. Paste the URL of the GitHub repository. This URL will be the same as what you see on your GitHub account. However, we need to add <code>.git</code> to the end of it.</p></li>
 </ol>
-<pre><code>    https://github.com/&lt;your_github_username&gt;/dataviz-exercises.git</code></pre>
+<pre><code>  https://github.com/&lt;your_github_username&gt;/dataviz-exercises.git</code></pre>
 <ol class="incremental" start="3" type="1">
-<li>When you create the project, a directory will be created as a <em>sub</em>-directory of your main <code>/dataviz</code> directory. Thus, you will see <code>/dataviz/dataviz-exercises</code>.</li>
+<li>Specify the location of your uber directory, <code>dataviz/</code> to create this as a <em>sub</em>-directory. We know that <code>dataviz/</code> is simply a directory for your course files and it is not another RStudio project. If you have other projects, <em>do not</em> create a project inside of an existing project’s directory or you will have problems.</li>
 </ol>
-<p><strong>WARNING:</strong> <em>Do not</em> create the project inside of an existing project’s directory.</p>
+<p>Your directory structure will look like structure seen below. The project will be nested in <code>dataviz/</code>. We will both know where to find it.</p>
+<pre><code>dataviz/
+└── dataviz-exercises/ (project root directory)</code></pre>
 <p><strong>Note:</strong> I recommend that you also select <em>“Open in new session”</em> in order to compartmentalize projects. When you work on the team project, open the project. When you work on your homework or other class exercises, open your <em>homework</em> project.</p>
 <ol class="incremental" start="4" type="1">
 <li>Click <em>“Create Project”</em> to create the new project directory, which will create:
