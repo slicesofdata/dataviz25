@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gabriel I. Cook">
 
-<title>Final Presentation</title>
+<title>Git Team Exercise: Safe Collaboration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,46 +159,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><strong>HW</strong></span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-hw">    
-        <li>
-    <a class="dropdown-item" href="../homework/hw01.pdf">
- <span class="dropdown-text">HW 01</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw02.pdf">
- <span class="dropdown-text">HW 02</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw03.pdf">
- <span class="dropdown-text">HW 03</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw04.pdf">
- <span class="dropdown-text">HW 04</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw05.pdf">
- <span class="dropdown-text">HW 05</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw06.pdf">
- <span class="dropdown-text">HW 06</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw07.pdf">
- <span class="dropdown-text">HW 07</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw08.pdf">
- <span class="dropdown-text">HW 08</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw09.pdf">
- <span class="dropdown-text">HW 09</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../homework/hw10.pdf">
- <span class="dropdown-text">HW 10</span></a>
-  </li>  
+        <li class="dropdown-header">HW 01</li>
+        <li class="dropdown-header">HW 02</li>
+        <li class="dropdown-header">HW 03</li>
+        <li class="dropdown-header">HW 04</li>
+        <li class="dropdown-header">HW 05</li>
+        <li class="dropdown-header">HW 06</li>
+        <li class="dropdown-header">HW 07</li>
+        <li class="dropdown-header">HW 08</li>
+        <li class="dropdown-header">HW 09</li>
+        <li class="dropdown-header">HW 10</li>
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -173,18 +176,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><strong>Exercises</strong></span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
-        <li class="dropdown-header">Select Files</li>
         <li>
-    <a class="dropdown-item" href="../exercises/team-project-git-exercise.pdf">
- <span class="dropdown-text">team-project-git-exercise.pdf</span></a>
+    <a class="dropdown-item" href="../exercises/example-project-management-and-git.pdf">
+ <span class="dropdown-text">project-management-and-git.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../exercises/2025_grouping_and_summarizing_exercise.pdf">
+    <a class="dropdown-item" href="../exercises/grouping_and_summarizing_exercise.pdf">
  <span class="dropdown-text">grouping_and_summarizing_exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../exercises/2025-grouping-summarizing-plotting-git-exercise.pdf">
- <span class="dropdown-text">grouping-summarizing-plotting-git-exercise.pdf</span></a>
+    <a class="dropdown-item" href="../exercises/grouping-summarizing-and-plotting-exercise.pdf">
+ <span class="dropdown-text">grouping-summarizing-and-plotting-exercise.pdf</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../exercises/visualizing-associations-exercise.pdf">
@@ -206,6 +208,18 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../exercises/coordinates-axes-and-scales-exercise.pdf">
  <span class="dropdown-text">coordinates-axes-and-scales-exercise.pdf</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/more-distributions-exercise.pdf">
+ <span class="dropdown-text">more-distributions-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/uncertainty-and-variability-exercise.pdf">
+ <span class="dropdown-text">uncertainty-and-variability-exercise.pdf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/small-multiples-exercise.pdf">
+ <span class="dropdown-text">small-multiples-exercise.pdf</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -213,10 +227,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><strong>Data</strong></span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
-        <li>
-    <a class="dropdown-item" href="../data/raw/ggplot2_diamonds.Rds">
- <span class="dropdown-text">ggplot2_diamonds.Rds</span></a>
-  </li>  
         <li>
     <a class="dropdown-item" href="../data/baby-names-2008.csv">
  <span class="dropdown-text">baby-names-2008.csv</span></a>
@@ -331,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/04_project_final.html"><strong>Final Presentation</strong></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/new_07_using_git_with_branches.html">Git Team Exercise: Safe Collaboration</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -623,7 +633,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project/04_project_final.html" class="sidebar-item-text sidebar-link active">
+  <a href="../project/04_project_final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Final Presentation</strong></span></a>
   </div>
 </li>
@@ -635,8 +645,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../project/06_project_tasks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/06_project_tasks_client.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/new_07_using_git_with_branches.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Git Team Exercise: Safe Collaboration</span></a>
   </div>
 </li>
       </ul>
@@ -651,40 +679,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="incremental">
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><strong>Overview</strong></a></li>
-  <li><a href="#elements-to-focus-on" id="toc-elements-to-focus-on" class="nav-link" data-scroll-target="#elements-to-focus-on"><strong>Elements to Focus On</strong></a></li>
-  <li><a href="#presentation-medium" id="toc-presentation-medium" class="nav-link" data-scroll-target="#presentation-medium"><strong>Presentation Medium</strong></a></li>
-  <li><a href="#stakeholders" id="toc-stakeholders" class="nav-link" data-scroll-target="#stakeholders"><strong>Stakeholders</strong></a></li>
-  <li><a href="#evaluation-and-generalized-rubric" id="toc-evaluation-and-generalized-rubric" class="nav-link" data-scroll-target="#evaluation-and-generalized-rubric"><strong>Evaluation and Generalized Rubric</strong></a></li>
-  <li><a href="#presentation-tips" id="toc-presentation-tips" class="nav-link" data-scroll-target="#presentation-tips"><strong>Presentation Tips</strong></a></li>
+  <li><a href="#git-exercise-safe-collaboration-with-multiple-students" id="toc-git-exercise-safe-collaboration-with-multiple-students" class="nav-link active" data-scroll-target="#git-exercise-safe-collaboration-with-multiple-students">Git Exercise: Safe Collaboration with Multiple Students</a>
+  <ul class="incremental collapse">
+  <li><a href="#step-1-clone-the-repository" id="toc-step-1-clone-the-repository" class="nav-link" data-scroll-target="#step-1-clone-the-repository">Step 1: Clone the Repository</a></li>
+  <li><a href="#step-2-create-or-switch-to-a-branch" id="toc-step-2-create-or-switch-to-a-branch" class="nav-link" data-scroll-target="#step-2-create-or-switch-to-a-branch">Step 2: Create or Switch to a Branch</a></li>
+  <li><a href="#step-3-add-work-in-the-correct-folder" id="toc-step-3-add-work-in-the-correct-folder" class="nav-link" data-scroll-target="#step-3-add-work-in-the-correct-folder">Step 3: Add Work in the Correct Folder</a>
+  <ul class="incremental collapse">
+  <li><a href="#student-1-data-file" id="toc-student-1-data-file" class="nav-link" data-scroll-target="#student-1-data-file">Student 1: Data file</a></li>
+  <li><a href="#student-2-data-cleaning-script" id="toc-student-2-data-cleaning-script" class="nav-link" data-scroll-target="#student-2-data-cleaning-script">Student 2: Data cleaning script</a></li>
+  <li><a href="#student-3-plot-script" id="toc-student-3-plot-script" class="nav-link" data-scroll-target="#student-3-plot-script">Student 3: Plot script</a></li>
+  <li><a href="#student-4-quarto-webpage" id="toc-student-4-quarto-webpage" class="nav-link" data-scroll-target="#student-4-quarto-webpage">Student 4: Quarto webpage</a></li>
+  </ul></li>
+  <li><a href="#step-4-sync-safely-with-remote-repository" id="toc-step-4-sync-safely-with-remote-repository" class="nav-link" data-scroll-target="#step-4-sync-safely-with-remote-repository">Step 4: Sync Safely with Remote Repository</a></li>
+  <li><a href="#step-5-merging-into-main-instructor-or-team-lead" id="toc-step-5-merging-into-main-instructor-or-team-lead" class="nav-link" data-scroll-target="#step-5-merging-into-main-instructor-or-team-lead">Step 5: Merging into Main (Instructor or Team Lead)</a></li>
+  <li><a href="#summary-of-safe-practices" id="toc-summary-of-safe-practices" class="nav-link" data-scroll-target="#summary-of-safe-practices">Summary of Safe Practices</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/04_project_final.html"><strong>Final Presentation</strong></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project/index.html"><b>Project</b></a></li><li class="breadcrumb-item"><a href="../project/new_07_using_git_with_branches.html">Git Team Exercise: Safe Collaboration</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><strong>Final Presentation</strong></h1>
+<h1 class="title">Git Team Exercise: Safe Collaboration</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Gabriel I. Cook </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -694,56 +720,107 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction to reflect website project. Will be updated.</p>
-</div>
-</div>
-<section id="overview" class="level1">
-<h1><strong>Overview</strong></h1>
-<p>The <strong>in-class final presentation</strong> will be a clear and concise <strong>20-minute</strong> presentation version of the final written deliverable. You should focus on presenting a description of the problem that your website solves, your approach taken to address the problem, and your visualizations use to tell a story. Each team member should present and discuss at least one of their visualizations.</p>
-<p>The final website report for the project will be delivered to me and to your liaison. This report will represent a more careful unpacking of the problem, including a discussion about the data, data cleaning steps, and associated file deliverables. I can print a color-printed copy for you to distribute to the liaison. If the liaison is remote, a color version of the pdf is appropriate.</p>
-</section>
-<section id="elements-to-focus-on" class="level1">
-<h1><strong>Elements to Focus On</strong></h1>
-<p>For the final presentation, you should focus on presenting a description of the problem, data summaries, and visualization used to help tell a story about your findings. You should make sure to address the key elements outlined in the project proposal and discussed with your liaison.</p>
-</section>
-<section id="presentation-medium" class="level1">
-<h1><strong>Presentation Medium</strong></h1>
-<p>You can use any slide-presentation tool you wish. You will just need to ensure:</p>
+<section id="git-exercise-safe-collaboration-with-multiple-students" class="level1">
+<h1>Git Exercise: Safe Collaboration with Multiple Students</h1>
+<p>This exercise walks through a <strong>safe Git workflow</strong> for a team of 4 students. Each student contributes a different type of file:</p>
 <ul class="incremental">
-<li>a printed version of the slide deck for class time;</li>
-<li>an electronic pdf of the slide deck before or after the presentation;</li>
-<li>that visualizations contain <strong>Alt text</strong> (alternative text) for screen readers; <a href="https://accessibility.huit.harvard.edu/describe-content-images">What is alt text?</a>; see <a href="https://support.google.com/docs/answer/6199477?hl=en-GB">Make your document, presentation and sheets more accessible</a> and <a href="https://www.howtogeek.com/450847/how-to-add-alternative-text-to-an-object-in-google-slides/">How to add alternative text to an object in google slides</a></li>
+<li><strong>Student 1</strong>: Data file (<code>data/raw/data.csv</code>)</li>
+<li><strong>Student 2</strong>: Data cleaning script (<code>src/data/clean_data.R</code>)</li>
+<li><strong>Student 3</strong>: Plot script (<code>src/figs/make_plot.R</code>)</li>
+<li><strong>Student 4</strong>: Quarto webpage (<code>pages/report.qmd</code>) referencing a saved PNG figure (<code>figs/plot.png</code>)</li>
 </ul>
+<p>The focus is on <strong>fetching before merging</strong> to avoid conflicts and working safely without overwriting.</p>
+<hr>
+<section id="step-1-clone-the-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-clone-the-repository">Step 1: Clone the Repository</h2>
+<p>Each student first clones the repository:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/example-org/class-project.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> class-project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="stakeholders" class="level1">
-<h1><strong>Stakeholders</strong></h1>
-<p>Identify the stakeholders for your project. For example, include you liaison, liaison’s institution, course professor, your college, etc. for whom the final work will be submitted.</p>
+<section id="step-2-create-or-switch-to-a-branch" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-or-switch-to-a-branch">Step 2: Create or Switch to a Branch</h2>
+<p>Each student works on their own branch to avoid overwriting files.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student1-data      <span class="co"># Student 1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student2-cleaning   <span class="co"># Student 2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student3-plot       <span class="co"># Student 3</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> student4-report     <span class="co"># Student 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="evaluation-and-generalized-rubric" class="level1">
-<h1><strong>Evaluation and Generalized Rubric</strong></h1>
-<p>More detail will be added here similar to the <strong>Midterm Presentation</strong>.</p>
+<section id="step-3-add-work-in-the-correct-folder" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-add-work-in-the-correct-folder">Step 3: Add Work in the Correct Folder</h2>
+<section id="student-1-data-file" class="level3">
+<h3 class="anchored" data-anchor-id="student-1-data-file">Student 1: Data file</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your file as data/raw/data.csv</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add data/raw/data.csv</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add raw data file"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-2-data-cleaning-script" class="level3">
+<h3 class="anchored" data-anchor-id="student-2-data-cleaning-script">Student 2: Data cleaning script</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your script as src/data/clean_data.R</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/data/clean_data.R</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data cleaning script"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-3-plot-script" class="level3">
+<h3 class="anchored" data-anchor-id="student-3-plot-script">Student 3: Plot script</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your script as src/figs/make_plot.R</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure it saves a PNG figure in figs/plot.png</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add src/figs/make_plot.R figs/plot.png</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add plot script and saved PNG"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="student-4-quarto-webpage" class="level3">
+<h3 class="anchored" data-anchor-id="student-4-quarto-webpage">Student 4: Quarto webpage</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your report in pages/report.qmd</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure it references figs/plot.png in the text</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add pages/report.qmd</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add report referencing plot"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="step-4-sync-safely-with-remote-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-sync-safely-with-remote-repository">Step 4: Sync Safely with Remote Repository</h2>
+<p>Before pushing changes, always <strong>fetch first</strong> to see if others have updated the repo:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul class="incremental">
-<li>Quality of project deliverable documents (e.g., organization, coherence, story, coding clarity/organization, models, plots, etc.)</li>
-<li>Professionalism (e.g., liaison meeting etiquette and responsibility, timely discord communication, non-tardy attendance at weekly team meeting, weekly worklogs, feedback from liaison, etc.)</li>
-<li>Peer evaluation (e.g., contributions, team player, etc.)</li>
+<li><p>If there are <strong>no new changes</strong> on the remote branch, you can push safely:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin student1-data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>If there <strong>are new changes</strong>, merge them into your branch before pushing:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge origin/main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
-<p><strong>Note:</strong> Liaisons will also participate in evaluating teams. The team with the most impressive project (e.g., most clear, most useful and actionable, most interesting, most thought provoking, etc.) will receive bonus points.</p>
+<p>⚠️ <strong>Warning</strong>: If you use <code>git pull</code> directly, it automatically merges remote changes into your branch. This may create conflicts you aren’t ready to handle. Using <code>git fetch</code> first is safer, because you see what’s new <strong>before merging</strong>.</p>
+<hr>
 </section>
-<section id="presentation-tips" class="level1">
-<h1><strong>Presentation Tips</strong></h1>
-<p>See tips for Midterm Presentation.</p>
+<section id="step-5-merging-into-main-instructor-or-team-lead" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-merging-into-main-instructor-or-team-lead">Step 5: Merging into Main (Instructor or Team Lead)</h2>
+<p>The instructor (or team lead) will merge student branches into <code>main</code> one at a time:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge origin/student1-data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Repeat for <code>student2-cleaning</code>, <code>student3-plot</code>, <code>student4-report</code>.</p>
+<hr>
+</section>
+<section id="summary-of-safe-practices" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-safe-practices">Summary of Safe Practices</h2>
+<ul class="incremental">
+<li>Work in <strong>separate branches</strong>.</li>
+<li>Place files in <strong>designated folders</strong>.</li>
+<li>Use <strong><code>git fetch</code> before merging</strong> (safer than pull).</li>
+<li>Only instructor merges to <strong>main</strong>.</li>
+<li>Avoid working directly on <strong>main</strong> branch.</li>
+</ul>
+<hr>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>After merging, open the webpage:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render pages/report.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will include the cleaned data, generated figure, and student contributions combined.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
