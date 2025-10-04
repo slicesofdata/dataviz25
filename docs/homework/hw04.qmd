@@ -71,3 +71,7 @@ source(here::here("src", "figs", "beavis_stag_ht_chamionship.R"))
 
 
 ![a plot description](../figs/beavis_stag_ht_chamionship.png)
+
+
+**Upload your `.qmd` file to:**
+[here](https://ln5.sync.com/dl/a038628f0/wwfifjxk-f7rfshin-rkedi3y8-77f9zaii)
