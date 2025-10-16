@@ -31,7 +31,7 @@ Your class project involves assembling components of webpages in service of crea
 - within your `.R` plotting script:
    - create a script (e.g., `beavis_stag_ht_chamionship.R`) for building a plot that replicates [this plot](https://raw.githubusercontent.com/slicesofdata/dataviz25/main/figs/beavis_stag_ht_chamionship.png)
    - read the data: `readr::read_csv("https://raw.githubusercontent.com/slicesofdata/dataviz25/main/data/tfrrs/ht-cleaned.csv")`
-   - utilize the plot-saving function that you created earlier in order to save your plot as a `.png` file named meaningfully and ensuring that you save it to a `figs/` directory (needed for the embed)
+   - utilize the plot-saving function that you created earlier in order to save your plot as a `.png` file named meaningfully and ensuring that you save it to a `figs/` directory (needed for the `.png` embedding into the `.qmd` file)
 
 - within *this* `.qmd` file:
    - call/execute (e.g., source) all relevant scripts needed for your workflow in the *designated* quarto code block (absolutely no code in code blocks except for calling scripts) 
