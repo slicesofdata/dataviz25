@@ -35,7 +35,7 @@ Your class project involves assembling components of webpages in service of crea
 
 - within *this* `.qmd` file:
    - call/execute (e.g., source) all relevant scripts needed for your workflow in the *designated* quarto code block (absolutely no code in code blocks except for calling scripts) 
-   - embed your `.png` plot file to be embedded in the webpage
+   - embed your `.png` plot file to be embedded in the webpage ()
    - remove all homework related text from this `.qmd` file so that the contents do not read as a homework assignment 
    - add/modify any other text content you believe would be useful
 
