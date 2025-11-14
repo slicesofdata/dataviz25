@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="R Basic Refresher and Catch-Up for PSYC 167">
 
-<title>quarto-inpute76c07be4394db35</title>
+<title>R Basics and Refreshers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,11 +70,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../../css/nav.css">
+<link rel="stylesheet" href="../../css/styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -86,19 +87,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text"><strong>Home</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule/index.html"> 
+    <a class="nav-link active" href="../../schedule/index.html" aria-current="page"> 
 <span class="menu-text"><strong>Schedule</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./modules/index.html"> 
+    <a class="nav-link" href="../../modules/index.html"> 
 <span class="menu-text"><strong>Modules</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project/index.html"> 
+    <a class="nav-link" href="../../project/index.html"> 
 <span class="menu-text"><strong>Project</strong></span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -107,15 +108,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="./slides/01_intro_rstudio_rmarkdown_slides.html">
+    <a class="dropdown-item" href="../../slides/01_intro_rstudio_rmarkdown_slides.html">
  <span class="dropdown-text">R, RStudio, &amp; R Markdown</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./slides/02_git_slides.html">
+    <a class="dropdown-item" href="../../slides/02_git_slides.html">
  <span class="dropdown-text">Git and GitHub</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./slides/03_functions_slides.html">
+    <a class="dropdown-item" href="../../slides/03_functions_slides.html">
  <span class="dropdown-text">Functions, Parameters, and Arguments</span></a>
   </li>  
     </ul>
@@ -126,63 +127,59 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-hw">    
         <li>
-    <a class="dropdown-item" href="./homework/hw01.pdf">
+    <a class="dropdown-item" href="../../homework/hw01.pdf">
  <span class="dropdown-text">HW 01</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw02.pdf">
+    <a class="dropdown-item" href="../../homework/hw02.pdf">
  <span class="dropdown-text">HW 02</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw03.pdf">
+    <a class="dropdown-item" href="../../homework/hw03.pdf">
  <span class="dropdown-text">HW 03</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw04.qmd">
+    <a class="dropdown-item" href="../../homework/hw04.qmd">
  <span class="dropdown-text">HW 04 .qmd file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw04-example.html">
+    <a class="dropdown-item" href="../../homework/hw04-example.html">
  <span class="dropdown-text">HW 04 Example Rendered html file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw05.pdf">
+    <a class="dropdown-item" href="../../homework/hw05.pdf">
  <span class="dropdown-text">HW 05</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw06.pdf">
+    <a class="dropdown-item" href="../../homework/hw06.pdf">
  <span class="dropdown-text">HW 06</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw07.pdf">
- <span class="dropdown-text">HW 07 (see related files below)</span></a>
+    <a class="dropdown-item" href="../../homework/hw07.pdf">
+ <span class="dropdown-text">HW 07</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/_quarto.yml">
- <span class="dropdown-text">HW 07 simple _quarto.yml file</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./homework/scss.pdf">
+    <a class="dropdown-item" href="../../homework/hw07-scss.pdf">
  <span class="dropdown-text">HW 07 scss description file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/example-light.scss">
+    <a class="dropdown-item" href="../../homework/example-light.scss">
  <span class="dropdown-text">HW 07 scss light example</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/example-dark.scss">
+    <a class="dropdown-item" href="../../homework/example-light.scss">
  <span class="dropdown-text">HW 07 css dark example</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw08.pdf">
+    <a class="dropdown-item" href="../../homework/hw08.pdf">
  <span class="dropdown-text">HW 08</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw09.pdf">
+    <a class="dropdown-item" href="../../homework/hw09.pdf">
  <span class="dropdown-text">HW 09</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw10.pdf">
+    <a class="dropdown-item" href="../../homework/hw10.pdf">
  <span class="dropdown-text">HW 10</span></a>
   </li>  
     </ul>
@@ -194,51 +191,51 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
         <li class="dropdown-header">Select Files</li>
         <li>
-    <a class="dropdown-item" href="./exercises/team-project-git-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/team-project-git-exercise.pdf">
  <span class="dropdown-text">team-project-git-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/2025_grouping_and_summarizing_exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/2025_grouping_and_summarizing_exercise.pdf">
  <span class="dropdown-text">grouping_and_summarizing_exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/2025-grouping-summarizing-plotting-git-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/2025-grouping-summarizing-plotting-git-exercise.pdf">
  <span class="dropdown-text">grouping-summarizing-plotting-git-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/visualizing-associations-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/visualizing-associations-exercise.pdf">
  <span class="dropdown-text">visualizing-associations-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/spatial-position-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/spatial-position-exercise.pdf">
  <span class="dropdown-text">spatial-position-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/visualizing-amounts-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/visualizing-amounts-exercise.pdf">
  <span class="dropdown-text">visualizing-amounts-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/color-scales-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/color-scales-exercise.pdf">
  <span class="dropdown-text">color-scales-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/coordinates-axes-and-scales-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/coordinates-axes-and-scales-exercise.pdf">
  <span class="dropdown-text">coordinates-axes-and-scales-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/stat-summary-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/stat-summary-exercise.pdf">
  <span class="dropdown-text">stat-summary-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/more-distributions-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/more-distributions-exercise.pdf">
  <span class="dropdown-text">more-distributions-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/uncertainty-and-variability-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/uncertainty-and-variability-exercise.pdf">
  <span class="dropdown-text">uncertainty-and-variability-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/small-multiples-exercise.pdf">
+    <a class="dropdown-item" href="../../exercises/small-multiples-exercise.pdf">
  <span class="dropdown-text">small-multiples-exercise.pdf</span></a>
   </li>  
     </ul>
@@ -249,27 +246,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
         <li>
-    <a class="dropdown-item" href="./data/raw/ggplot2_diamonds.Rds">
+    <a class="dropdown-item" href="../../data/raw/ggplot2_diamonds.Rds">
  <span class="dropdown-text">ggplot2_diamonds.Rds</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/baby-names-2008.csv">
+    <a class="dropdown-item" href="../../data/baby-names-2008.csv">
  <span class="dropdown-text">baby-names-2008.csv</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/cms-top-all-time-2023-swim.xlsx">
+    <a class="dropdown-item" href="../../data/cms-top-all-time-2023-swim.xlsx">
  <span class="dropdown-text">cms-top-all-time-2023-swim.xlsx (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../../data/cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cms-top-all-time-2023-swim.csv (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/processed/cleaned-cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../../data/processed/cleaned-cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cleaned-cms-top-all-time-2023-swim.csv (/data/processed)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/processed/cleaned-2023-cms-invite.csv">
+    <a class="dropdown-item" href="../../data/processed/cleaned-2023-cms-invite.csv">
  <span class="dropdown-text">cleaned-2023-cms-invite.csv (/data/processed)</span></a>
   </li>  
         <li>
@@ -288,15 +285,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-example-files--other">    
         <li>
-    <a class="dropdown-item" href="./resources/tools.html">
+    <a class="dropdown-item" href="../../resources/tools.html">
  <span class="dropdown-text"><strong>Other Tools/Resources</strong></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./examples/example-figure-script.R">
+    <a class="dropdown-item" href="../../examples/example-figure-script.R">
  <span class="dropdown-text">example-figure-script.R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./examples/example-rmarkdown-file-with-fig-script.Rmd">
+    <a class="dropdown-item" href="../../examples/example-rmarkdown-file-with-fig-script.Rmd">
  <span class="dropdown-text">example-rmarkdown-file-with-fig-script.Rmd</span></a>
   </li>  
     </ul>
@@ -307,11 +304,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cheatsheets">    
         <li>
-    <a class="dropdown-item" href="./cheatsheets_and_tips/symbols.html">
+    <a class="dropdown-item" href="../../cheatsheets_and_tips/symbols.html">
  <span class="dropdown-text">Symbols</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./cheatsheets/rmarkdown-2.0.pdf">
+    <a class="dropdown-item" href="../../cheatsheets/rmarkdown-2.0.pdf">
  <span class="dropdown-text">RMarkdown</span></a>
   </li>  
         <li>
@@ -331,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Reading and Writing Data with {readr}</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./cheatsheets/Data_Science_With_R_Workflow.pdf">
+    <a class="dropdown-item" href="../../cheatsheets/Data_Science_With_R_Workflow.pdf">
  <span class="dropdown-text">Data Science with RWorkflow</span></a>
   </li>  
         <li>
@@ -361,41 +358,375 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules_setup/index.html"><b>Installation, Setup, &amp; R Basics</b></a></li><li class="breadcrumb-item"><a href="../../modules_setup/R Basics/index.html"><b>R Basics and Refreshers</b></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus/syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Syllabus</strong></span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Schedule</strong></span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules_setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installation, Setup, &amp; R Basics</b></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules_setup/Installation &amp; Setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installation &amp; Setup</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/Installation &amp; Setup/installing_r_and_rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Installing R &amp; RStudio</b></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/Installation &amp; Setup/installing_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Installing Git</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules_setup/R Basics/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><b>R Basics and Refreshers</b></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/R Basics/introduction_to_r_rstudio_and_rmarkdown.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to RStudio, R Markdown, &amp; Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/R Basics/functions_and_scripts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Functions, Arguments, and R scripts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/R Basics/vectors_and_data_frame_basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors and data frame basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules_setup/R Basics/reading_data_files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reading data files</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Modules</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../modules/project_management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Project Management</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/project_management/setting_up_git_and_github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Management 01</strong>: Setting Up Git and GitHub for R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/project_management/using_git_and_github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Management 02</strong>: R Projects, Git, and GitHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/graphical_perception.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Graphical perception</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/data_frame_manipulation_and_wrangling.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Data frame manipulation and wrangling</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/data_subsets_and_summaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Data subsets and summaries</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/considerations_in_data_visualization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Considerations in data visualization</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/designing_perceptually_efficient_visualizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Designing perceptually-efficient visualizations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/ggplot_and_the_grammar_of_graphics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong><code>{ggplot2}</code>: The Grammar of Graphics</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/visualizing_associations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing associations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/spatial_position_and_adjustment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Spatial position and adjustment</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/visualizing_amounts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing amounts</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/color_scales_and_palettes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Color scales and palettes</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/histograms_and_density_plots.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Histograms and density plots</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/coordinates_axes_and_position_scales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Coordinates, axes, and position scales</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/statistical_transformations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Statistical transformations</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/visualizing_more_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing more distributions</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/visualizing_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing uncertainty</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/legends_and_arrangement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Legends and arrangement</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/visualizing_trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Visualizing trends</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/multi_panel_plots_faceting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Multi-panel plots: Faceting</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/annotation_and_text.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Annotation and text</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/attentional_control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Attentional control</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/themes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Bonus: Theme and figure design</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../modules/titles_captions_and_tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Title, Captions, and Tables</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../project/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><b>Project</b></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/01_project_directory_structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Directory Structure</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/02_project_team_roles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Team membership and roles</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/03_project_midterm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Midterm presentation</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/04_project_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Final Presentation</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/05_project_report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Final Report</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project/06_project_tasks_webpage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Project Tasks</strong></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul class="incremental">
-  <li><a href="#psyc-167-data-visualization" id="toc-psyc-167-data-visualization" class="nav-link active" data-scroll-target="#psyc-167-data-visualization"><strong>PSYC 167: Data Visualization</strong></a></li>
+  <li><a href="#setup-structure" id="toc-setup-structure" class="nav-link active" data-scroll-target="#setup-structure">Setup Structure</a></li>
+  <li><a href="#other-setup-topics" id="toc-other-setup-topics" class="nav-link" data-scroll-target="#other-setup-topics">Other Setup Topics</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-
-<div class="cell" data-layout-align="left" data-image="images/dataviz_hex_plus_course.png" data-figh-height="5">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/dataviz_hex_plus_course.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:20.0%"></p>
-</figure>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../modules_setup/index.html"><b>Installation, Setup, &amp; R Basics</b></a></li><li class="breadcrumb-item"><a href="../../modules_setup/R Basics/index.html"><b>R Basics and Refreshers</b></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><b>R Basics and Refreshers</b></h1>
 </div>
+
+<div>
+  <div class="description">
+    R Basic Refresher and Catch-Up for PSYC 167
+  </div>
 </div>
-</div>
-<section id="psyc-167-data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="psyc-167-data-visualization"><strong>PSYC 167: Data Visualization</strong></h2>
-<p>This is the course website for PSYC 167: <em>Data Visualization</em>, taught by <a href="https://gabrielcook.xyz">Prof.&nbsp;Gabriel I. Cook</a>; 1 credit</p>
-<p><strong>Description</strong></p>
-<p>Data visualization is the science and art of creating graphical representations of information and data. Visual representations provide accessible ways to see patterns, trends, and outliers in data. Variables like position, size, and orientation can focus attention and guide perception but can also bias interpretation of data. Students will learn how well-designed visualizations can reduce bias and improve comprehension for data thereby facilitating data-driven decision-making. Students will explore techniques for creating effective visualizations based on principles from cognitive and perceptual psychology, art, and design. Students will gain hands-on experience coding real-world data visualizations for local offices, organizations, and industry participants.</p>
-<p>The course is targeted toward students interested in using visualizations to communicate their own messages, and students interested in creating better visualization tools and systems, and students with expressed interest in cognition and cognitive biases related to data communication. Students will engage in discussions of the readings, complete programming and data analysis assignments, and prepare a final project involving storytelling with data visualizations.</p>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>For this course, we use the R programming language. Although you may have a preferred IDE, my recommendation is to use RStudio. All instructions will assume you are using RStudio. We will also use the R Markdown language for report documents. Projects will be managed at GitHub and will interface with RStudio using the Git program.</p>
+<section id="setup-structure" class="level2">
+<h2 class="anchored" data-anchor-id="setup-structure">Setup Structure</h2>
+<ul class="incremental">
+<li>Install R and RStudio</li>
+<li>Create a GitHub account if you do not have one</li>
+<li>Install Git if your computer system needs it (e.g., not installed)</li>
+</ul>
+</section>
+<section id="other-setup-topics" class="level2">
+<h2 class="anchored" data-anchor-id="other-setup-topics">Other Setup Topics</h2>
+<p>For those requiring refreshers about R Markdown, functions, and scripts are in this section.</p>
 
 
 </section>

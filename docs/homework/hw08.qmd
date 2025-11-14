@@ -1,0 +1,37 @@
+---
+title: "My Name"
+---
+
+# Assembling your Elements 
+
+You will ensure that your data and plotting scripts needed for creating your plot are used to build the up-to-date version of the plot.
+
+## Code Block for Sourcing Your Scripts
+
+```{r}
+# source data-related scripts 
+
+
+# source plotting script(s)
+
+```
+
+## The Modified Plot
+
+Describe why you might want to implement this approach.
+
+
+
+
+## Code Block for Embedding your PNG
+
+```{r}
+# plot with a caption
+
+#| fig.cap: "Your custom message here"
+#| fig.align: "center" # to center plot on page if desired
+#| out.width: "100%"   # or some other % appropriate for you site
+
+knitr::include_graphics(here::here("figs", "stag_ht_chamionship.png"))
+```
+

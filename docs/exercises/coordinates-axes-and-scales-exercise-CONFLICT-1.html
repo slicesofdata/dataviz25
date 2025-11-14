@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-inpute76c07be4394db35</title>
+<title>Scales Exercise</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +103,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://kit.fontawesome.com/78ddb093ea.js" crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -86,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><strong>Home</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schedule/index.html"> 
+    <a class="nav-link" href="../schedule/index.html"> 
 <span class="menu-text"><strong>Schedule</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./modules/index.html"> 
+    <a class="nav-link" href="../modules/index.html"> 
 <span class="menu-text"><strong>Modules</strong></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project/index.html"> 
+    <a class="nav-link" href="../project/index.html"> 
 <span class="menu-text"><strong>Project</strong></span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -107,15 +141,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="./slides/01_intro_rstudio_rmarkdown_slides.html">
+    <a class="dropdown-item" href="../slides/01_intro_rstudio_rmarkdown_slides.html">
  <span class="dropdown-text">R, RStudio, &amp; R Markdown</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./slides/02_git_slides.html">
+    <a class="dropdown-item" href="../slides/02_git_slides.html">
  <span class="dropdown-text">Git and GitHub</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./slides/03_functions_slides.html">
+    <a class="dropdown-item" href="../slides/03_functions_slides.html">
  <span class="dropdown-text">Functions, Parameters, and Arguments</span></a>
   </li>  
     </ul>
@@ -126,63 +160,59 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-hw">    
         <li>
-    <a class="dropdown-item" href="./homework/hw01.pdf">
+    <a class="dropdown-item" href="../homework/hw01.pdf">
  <span class="dropdown-text">HW 01</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw02.pdf">
+    <a class="dropdown-item" href="../homework/hw02.pdf">
  <span class="dropdown-text">HW 02</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw03.pdf">
+    <a class="dropdown-item" href="../homework/hw03.pdf">
  <span class="dropdown-text">HW 03</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw04.qmd">
+    <a class="dropdown-item" href="../homework/hw04.qmd">
  <span class="dropdown-text">HW 04 .qmd file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw04-example.html">
+    <a class="dropdown-item" href="../homework/hw04-example.html">
  <span class="dropdown-text">HW 04 Example Rendered html file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw05.pdf">
+    <a class="dropdown-item" href="../homework/hw05.pdf">
  <span class="dropdown-text">HW 05</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw06.pdf">
+    <a class="dropdown-item" href="../homework/hw06.pdf">
  <span class="dropdown-text">HW 06</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw07.pdf">
- <span class="dropdown-text">HW 07 (see related files below)</span></a>
+    <a class="dropdown-item" href="../homework/hw07.pdf">
+ <span class="dropdown-text">HW 07</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/_quarto.yml">
- <span class="dropdown-text">HW 07 simple _quarto.yml file</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./homework/scss.pdf">
+    <a class="dropdown-item" href="../homework/hw07-scss.pdf">
  <span class="dropdown-text">HW 07 scss description file</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/example-light.scss">
+    <a class="dropdown-item" href="../homework/example-light.scss">
  <span class="dropdown-text">HW 07 scss light example</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/example-dark.scss">
+    <a class="dropdown-item" href="../homework/example-light.scss">
  <span class="dropdown-text">HW 07 css dark example</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw08.pdf">
+    <a class="dropdown-item" href="../homework/hw08.pdf">
  <span class="dropdown-text">HW 08</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw09.pdf">
+    <a class="dropdown-item" href="../homework/hw09.pdf">
  <span class="dropdown-text">HW 09</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./homework/hw10.pdf">
+    <a class="dropdown-item" href="../homework/hw10.pdf">
  <span class="dropdown-text">HW 10</span></a>
   </li>  
     </ul>
@@ -194,51 +224,51 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises">    
         <li class="dropdown-header">Select Files</li>
         <li>
-    <a class="dropdown-item" href="./exercises/team-project-git-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/team-project-git-exercise.pdf">
  <span class="dropdown-text">team-project-git-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/2025_grouping_and_summarizing_exercise.pdf">
+    <a class="dropdown-item" href="../exercises/2025_grouping_and_summarizing_exercise.pdf">
  <span class="dropdown-text">grouping_and_summarizing_exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/2025-grouping-summarizing-plotting-git-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/2025-grouping-summarizing-plotting-git-exercise.pdf">
  <span class="dropdown-text">grouping-summarizing-plotting-git-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/visualizing-associations-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/visualizing-associations-exercise.pdf">
  <span class="dropdown-text">visualizing-associations-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/spatial-position-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/spatial-position-exercise.pdf">
  <span class="dropdown-text">spatial-position-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/visualizing-amounts-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/visualizing-amounts-exercise.pdf">
  <span class="dropdown-text">visualizing-amounts-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/color-scales-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/color-scales-exercise.pdf">
  <span class="dropdown-text">color-scales-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/coordinates-axes-and-scales-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/coordinates-axes-and-scales-exercise.pdf">
  <span class="dropdown-text">coordinates-axes-and-scales-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/stat-summary-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/stat-summary-exercise.pdf">
  <span class="dropdown-text">stat-summary-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/more-distributions-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/more-distributions-exercise.pdf">
  <span class="dropdown-text">more-distributions-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/uncertainty-and-variability-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/uncertainty-and-variability-exercise.pdf">
  <span class="dropdown-text">uncertainty-and-variability-exercise.pdf</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./exercises/small-multiples-exercise.pdf">
+    <a class="dropdown-item" href="../exercises/small-multiples-exercise.pdf">
  <span class="dropdown-text">small-multiples-exercise.pdf</span></a>
   </li>  
     </ul>
@@ -249,27 +279,27 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
         <li>
-    <a class="dropdown-item" href="./data/raw/ggplot2_diamonds.Rds">
+    <a class="dropdown-item" href="../data/raw/ggplot2_diamonds.Rds">
  <span class="dropdown-text">ggplot2_diamonds.Rds</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/baby-names-2008.csv">
+    <a class="dropdown-item" href="../data/baby-names-2008.csv">
  <span class="dropdown-text">baby-names-2008.csv</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/cms-top-all-time-2023-swim.xlsx">
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.xlsx">
  <span class="dropdown-text">cms-top-all-time-2023-swim.xlsx (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../data/cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cms-top-all-time-2023-swim.csv (/data/raw)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/processed/cleaned-cms-top-all-time-2023-swim.csv">
+    <a class="dropdown-item" href="../data/processed/cleaned-cms-top-all-time-2023-swim.csv">
  <span class="dropdown-text">cleaned-cms-top-all-time-2023-swim.csv (/data/processed)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data/processed/cleaned-2023-cms-invite.csv">
+    <a class="dropdown-item" href="../data/processed/cleaned-2023-cms-invite.csv">
  <span class="dropdown-text">cleaned-2023-cms-invite.csv (/data/processed)</span></a>
   </li>  
         <li>
@@ -288,15 +318,15 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-example-files--other">    
         <li>
-    <a class="dropdown-item" href="./resources/tools.html">
+    <a class="dropdown-item" href="../resources/tools.html">
  <span class="dropdown-text"><strong>Other Tools/Resources</strong></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./examples/example-figure-script.R">
+    <a class="dropdown-item" href="../examples/example-figure-script.R">
  <span class="dropdown-text">example-figure-script.R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./examples/example-rmarkdown-file-with-fig-script.Rmd">
+    <a class="dropdown-item" href="../examples/example-rmarkdown-file-with-fig-script.Rmd">
  <span class="dropdown-text">example-rmarkdown-file-with-fig-script.Rmd</span></a>
   </li>  
     </ul>
@@ -307,11 +337,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-cheatsheets">    
         <li>
-    <a class="dropdown-item" href="./cheatsheets_and_tips/symbols.html">
+    <a class="dropdown-item" href="../cheatsheets_and_tips/symbols.html">
  <span class="dropdown-text">Symbols</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./cheatsheets/rmarkdown-2.0.pdf">
+    <a class="dropdown-item" href="../cheatsheets/rmarkdown-2.0.pdf">
  <span class="dropdown-text">RMarkdown</span></a>
   </li>  
         <li>
@@ -331,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Reading and Writing Data with {readr}</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./cheatsheets/Data_Science_With_R_Workflow.pdf">
+    <a class="dropdown-item" href="../cheatsheets/Data_Science_With_R_Workflow.pdf">
  <span class="dropdown-text">Data Science with RWorkflow</span></a>
   </li>  
         <li>
@@ -363,7 +393,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -371,33 +401,117 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="incremental">
-  <li><a href="#psyc-167-data-visualization" id="toc-psyc-167-data-visualization" class="nav-link active" data-scroll-target="#psyc-167-data-visualization"><strong>PSYC 167: Data Visualization</strong></a></li>
+  <li><a href="#exercise-instructions" id="toc-exercise-instructions" class="nav-link active" data-scroll-target="#exercise-instructions">Exercise Instructions</a>
+  <ul class="incremental collapse">
+  <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">Data Set</a></li>
+  <li><a href="#problem-1-format-proportion-axis" id="toc-problem-1-format-proportion-axis" class="nav-link" data-scroll-target="#problem-1-format-proportion-axis">Problem 1: Format Proportion Axis</a></li>
+  <li><a href="#problem-2-format-revenue-axis-as-currency" id="toc-problem-2-format-revenue-axis-as-currency" class="nav-link" data-scroll-target="#problem-2-format-revenue-axis-as-currency">Problem 2: Format Revenue Axis as Currency</a></li>
+  <li><a href="#problem-3-custom-breaks-for-time-axis" id="toc-problem-3-custom-breaks-for-time-axis" class="nav-link" data-scroll-target="#problem-3-custom-breaks-for-time-axis">Problem 3: Custom Breaks for Time Axis</a></li>
+  <li><a href="#problem-4-discrete-time-axis-with-custom-labels" id="toc-problem-4-discrete-time-axis-with-custom-labels" class="nav-link" data-scroll-target="#problem-4-discrete-time-axis-with-custom-labels">Problem 4: Discrete Time Axis with Custom Labels</a></li>
+  <li><a href="#problem-5-log-transformation-of-revenue" id="toc-problem-5-log-transformation-of-revenue" class="nav-link" data-scroll-target="#problem-5-log-transformation-of-revenue">Problem 5: Log Transformation of Revenue</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-
-<div class="cell" data-layout-align="left" data-image="images/dataviz_hex_plus_course.png" data-figh-height="5">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/dataviz_hex_plus_course.png" class="img-fluid quarto-figure quarto-figure-left figure-img" style="width:20.0%"></p>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Scales Exercise</h1>
 </div>
-</div>
-</div>
-<section id="psyc-167-data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="psyc-167-data-visualization"><strong>PSYC 167: Data Visualization</strong></h2>
-<p>This is the course website for PSYC 167: <em>Data Visualization</em>, taught by <a href="https://gabrielcook.xyz">Prof.&nbsp;Gabriel I. Cook</a>; 1 credit</p>
-<p><strong>Description</strong></p>
-<p>Data visualization is the science and art of creating graphical representations of information and data. Visual representations provide accessible ways to see patterns, trends, and outliers in data. Variables like position, size, and orientation can focus attention and guide perception but can also bias interpretation of data. Students will learn how well-designed visualizations can reduce bias and improve comprehension for data thereby facilitating data-driven decision-making. Students will explore techniques for creating effective visualizations based on principles from cognitive and perceptual psychology, art, and design. Students will gain hands-on experience coding real-world data visualizations for local offices, organizations, and industry participants.</p>
-<p>The course is targeted toward students interested in using visualizations to communicate their own messages, and students interested in creating better visualization tools and systems, and students with expressed interest in cognition and cognitive biases related to data communication. Students will engage in discussions of the readings, complete programming and data analysis assignments, and prepare a final project involving storytelling with data visualizations.</p>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="exercise-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-instructions">Exercise Instructions</h2>
+<p>In this exercise, you will create several plots using <code>ggplot2</code> and modify axis labels and breaks using the <code>scales</code> library. Use the provided data set to complete the tasks.</p>
+<section id="data-set" class="level3">
+<h3 class="anchored" data-anchor-id="data-set">Data Set</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Create a data frame with proportions, revenue, and time variables</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">set.seed(123)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">data &lt;- data.frame(</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">  Category = rep(c("A", "B", "C", "D"), each = 5),</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">  Proportion = runif(20, 0.01, 1),</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">  Revenue = round(runif(20, 1000, 50000), 2),</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">  Time = rep(2015:2019, 4)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in"># Display the data</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">print(data)</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="problem-1-format-proportion-axis" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1-format-proportion-axis">Problem 1: Format Proportion Axis</h3>
+<p>Create a bar plot showing the proportion of each <code>Category</code> in the data for a specific year. Format the y-axis to display the proportions as percentages using the <code>scales::percent</code> function.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data, aes(x = Category, y = Proportion, fill = Category)) +</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_bar(stat = "identity") +</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(labels = scales::percent) +  # Modify labels to show percentages</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Proportions by Category", y = "Proportion", x = "Category") +</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="problem-2-format-revenue-axis-as-currency" class="level3">
+<h3 class="anchored" data-anchor-id="problem-2-format-revenue-axis-as-currency">Problem 2: Format Revenue Axis as Currency</h3>
+<p>Create a point plot showing <code>Revenue</code> over <code>Time</code> for each <code>Category</code>. Format the y-axis to display revenue values as dollars using the <code>scales::dollar</code> function.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data, aes(x = Time, y = Revenue, color = Category)) +</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(size = 3) +</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(labels = scales::dollar) +  # Format y-axis as dollars</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Revenue Over Time by Category", y = "Revenue ($)", x = "Year") +</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="problem-3-custom-breaks-for-time-axis" class="level3">
+<h3 class="anchored" data-anchor-id="problem-3-custom-breaks-for-time-axis">Problem 3: Custom Breaks for Time Axis</h3>
+<p>Create a line plot of <code>Revenue</code> over <code>Time</code> for each <code>Category</code>. Limit the x-axis to display only the years 2016, 2018, and 2019 using the <code>breaks</code> parameter.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data, aes(x = Time, y = Revenue, group = Category, color = Category)) +</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_line() +</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_x_continuous(breaks = c(2016, 2018, 2019)) +  # Custom breaks for x-axis</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Revenue Over Selected Years", y = "Revenue ($)", x = "Year") +</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="problem-4-discrete-time-axis-with-custom-labels" class="level3">
+<h3 class="anchored" data-anchor-id="problem-4-discrete-time-axis-with-custom-labels">Problem 4: Discrete Time Axis with Custom Labels</h3>
+<p>Create a point plot showing <code>Proportion</code> over <code>Time</code> for each <code>Category</code>. Customize the labels of the x-axis to display “Yr-2015”, “Yr-2016”, etc., using the <code>labels</code> parameter with a custom function.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data, aes(x = Time, y = Proportion, color = Category)) +</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(size = 3) +</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_x_continuous(labels = function(x) paste("Yr-", x, sep = "")) +  # Custom labels</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(labels = scales::percent) +  # Percent format for y-axis</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Proportion Over Time", y = "Proportion", x = "Year") +</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="problem-5-log-transformation-of-revenue" class="level3">
+<h3 class="anchored" data-anchor-id="problem-5-log-transformation-of-revenue">Problem 5: Log Transformation of Revenue</h3>
+<p>Create a bar plot of total <code>Revenue</code> for each <code>Category</code> across all years. Apply a log transformation to the y-axis and format it to display the transformed values in dollars using the <code>scales::dollar</code> function.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data, aes(x = Category, y = Revenue, fill = Category)) +</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_bar(stat = "identity") +</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_continuous(trans = "log10", labels = scales::dollar) +  # Log transformation + dollar format</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Log-Transformed Revenue by Category", y = "Log Revenue ($)", x = "Category") +</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
