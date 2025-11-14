@@ -15,6 +15,8 @@ execute:
   freeze: auto
 ---
 
+
+
 # Overview
 
 Your class project involves assembling components of webpages in service of creating a website. To meet those ends, you will be wrangling data and writing code scripts that will reproduce visualizations when data are updated at different time periods (e.g., months, quarters, etc.). Those figure will also need to be embedded into a webpage for display. After this exercise, you should be well equipped to make progress on building pages for your website and adding relevant content to your pages.
@@ -31,11 +33,11 @@ Your class project involves assembling components of webpages in service of crea
 - within your `.R` plotting script:
    - create a script (e.g., `beavis_stag_ht_chamionship.R`) for building a plot that replicates [this plot](https://raw.githubusercontent.com/slicesofdata/dataviz25/main/figs/beavis_stag_ht_chamionship.png)
    - read the data: `readr::read_csv("https://raw.githubusercontent.com/slicesofdata/dataviz25/main/data/tfrrs/ht-cleaned.csv")`
-   - utilize the plot-saving function that you created earlier in order to save your plot as a `.png` file named meaningfully and ensuring that you save it to a `figs/` directory (needed for the `.png` embedding into the `.qmd` file)
+   - utilize the plot-saving function that you created earlier in order to save your plot as a `.png` file named meaningfully and ensuring that you save it to a `figs/` directory (needed for the embed)
 
 - within *this* `.qmd` file:
    - call/execute (e.g., source) all relevant scripts needed for your workflow in the *designated* quarto code block (absolutely no code in code blocks except for calling scripts) 
-   - embed your `.png` plot file to be embedded in the webpage ()
+   - embed your `.png` plot file to be embedded in the webpage
    - remove all homework related text from this `.qmd` file so that the contents do not read as a homework assignment 
    - add/modify any other text content you believe would be useful
 
@@ -74,4 +76,7 @@ source(here::here("src", "figs", "beavis_stag_ht_chamionship.R"))
 
 
 **Upload your `.qmd` file to:**
-[here](https://ln5.sync.com/dl/a038628f0/wwfifjxk-f7rfshin-rkedi3y8-77f9zaii)
+https://ln5.sync.com/dl/a038628f0/wwfifjxk-f7rfshin-rkedi3y8-77f9zaii
+
+
+
